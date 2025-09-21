@@ -16,19 +16,21 @@ function StatCard({ target, suffix, label, imgSrc }) {
 
   useEffect(() => {
     let start = 0;
-    const duration = 4000; 
+    const duration = 6000; 
     const stepTime = Math.max(Math.floor(duration / target), 20);
 
     const timer = setInterval(() => {
       start += 1;
       setCount(start);
+
       if (start >= target) {
-        clearInterval(timer);
+        start = 0; // reset counter when reaching target
       }
     }, stepTime);
 
     return () => clearInterval(timer);
   }, [target]);
+
 
   return (
     <div className="p-6 bg-white rounded-xl shadow-md flex flex-col items-center">
@@ -57,7 +59,7 @@ export default function HomePage() {
 const sdgs = [
   {
     id: 1,
-    img: "/sdg1.png",
+    img: "/Sdg1.png",
     title: "SDG 1: No Poverty",
     description:
       "End poverty in all its forms everywhere by providing equal access to economic resources and basic services.",
