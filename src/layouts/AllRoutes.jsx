@@ -17,14 +17,12 @@ import Agregation from "../pages/Agregation";
 import Storage from "../pages/Storage";
 import Value from "../pages/Value";
 import Training from "../pages/Training";
-import ScrollToTop from "../pages/ScrollToTop";
 
 
 
 const AllRoutes = () => {
   return (
     <Routes>
-            <ScrollToTop />
 
       <Route path="/" element={<HomePage/>} />
               <Route path="/impact" element={<Impact/>} />
