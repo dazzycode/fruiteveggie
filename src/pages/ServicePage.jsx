@@ -284,166 +284,166 @@ const ServicePage= () => {
   
 
       {/* FOOTER */}
-      <footer className="bg-green-950 text-white   mt-2 relative z-10">
-                  <div className="max-w-5xl mx-auto py-16 px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
-                   {/* Logo & Contact */}
-                   <div>
-                     <div className="flex items-center space-x-2">
-                       <img
-                         src="/logor.png"
-                         alt="Fruitnveggis Logo"
-                         className="w-12 h-12 rounded"
-                       />
-                       <div>
+    <footer className="bg-green-950 text-white   mt-2 relative z-10">
+            <div className="max-w-5xl mx-auto py-16 px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
+             {/* Logo & Contact */}
+             <div>
+               <div className="flex items-center space-x-2">
+                 <img
+                   src="/logor.png"
+                   alt="Fruitnveggis Logo"
+                   className="w-12 h-12 rounded"
+                 />
+                 <div>
                          <h3 className="font-semibold text-lg">Fruitieveggie</h3>
                    <p className="text-sm text-gray-400">Urban Farm</p>
-                       </div>
-                     </div>
-                     <div className="mt-12 space-y-2 text-sm">
-                                     <h3 className="font-semibold mb-5 text-lg">Reach Out to Us</h3>
-           
-                    
-               <div className="space-y-4">
-                 {/* Phone */}
-                 <div className="flex items-center space-x-3">
-                   <div className="p-2 bg-white/10 rounded-md">
-                     <FaPhoneAlt className="text-lime-400 text-lg" />
-                   </div>
-                   <p className="text-gray-200">+234 704 757 8249</p>
-                 </div>
-           
-                 {/* Email */}
-                 <div className="flex items-center space-x-3">
-                   <div className="p-2 bg-white/10 rounded-md">
-                     <FaEnvelope className="text-lime-400 text-lg" />
-                   </div>
-                   <p className="text-gray-200">smith@fruitnveggis.com</p>
-                 </div>
-           
-                 {/* Location */}
-                 <div className="flex items-center space-x-3">
-                   <div className="p-2 bg-white/10 rounded-md">
-                     <FaMapMarkerAlt className="text-lime-400 text-lg" />
-                   </div>
-                   <p className="text-gray-200">
-                     Adejo Village, Awooro, Devotion, Ogun State, Nigeria.
-                   </p>
                  </div>
                </div>
-             
-           
-                     </div>
-                   </div>
-           
-                   {/* Pages */}
-                   <div>
-                     <h4 className="font-semibold text-lg mb-4">Pages</h4>
-                     <ul className="space-y-4 text-sm">
-                       <li className="hover:text-white">Contact </li>
-                       <li className="hover:text-white">Services</li>
-                       <li className="hover:text-white">About us</li>
-                       <li className="hover:text-white">Impact</li>
-                       <li className="hover:text-white">Contact us</li>
-                     </ul>
-                   </div>
-           
-                   {/* Services */}
-                   <div>
-                     <h4 className="font-semibold text-lg mb-4">Services</h4>
-                     <ul className="space-y-4 text-sm">
-                       <li className="hover:text-white">Farming & Cultivation</li>
-                       <li className="hover:text-white">Aggregate & Market Linkages</li>
-                       <li className="hover:text-white">Cold Storage & Logistics</li>
-                       <li className="hover:text-white">Value Addition</li>
-                       <li className="hover:text-white">Training & Capacity Building</li>
-                     </ul>
-                   </div>
-           
-                   {/* Newsletter */}
-                   <div>
-                     <h4 className="font-semibold text-lg mb-4">
-                       Subscribe to our newsletter
-                     </h4>
-                     <form className="flex">
-                    
-               <div className="relative w-full max-w-md">
-                 <input
-                   type="email"
-                   placeholder="Add email address"
-                   className="w-full p-3 pr-12 bg-[#15281F] rounded-md focus:outline-none text-white"
-                 />
-                 {/* Send Icon Button inside input */}
-                 <a
-  href="mailto:smith@fruitnveggis.com"
-  className="absolute right-3 top-1/2 -translate-y-1/2 text-[#B5EF14] hover:text-lime-600"
->
-  <FaPaperPlane size={22} />
-</a>
-               </div>
-             
-                     </form>
-                   </div>
-                 </div>
-           
-                 {/* Bottom Bar */}
-                 <div className="border-t border-gray-600 mt-10 py-6">
-                   <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-                     {/* Socials */}
-                     <div className="flex text-[#B5EF14] space-x-4">
-                      <a 
-        href="https://www.facebook.com/Fruitieveggi" 
-        target="_blank" 
-        rel="noopener noreferrer"
-      >
-        <FaFacebookF />
-      </a>
-      
-      <a 
-        href="https://www.linkedin.com/company/fruitieveggie-farmacy/" 
-        target="_blank" 
-        rel="noopener noreferrer"
-      >
-        <FaLinkedinIn />
-      </a>
-      
-      <a 
-        href="https://www.x.com/Fruitieveggie_" 
-        target="_blank" 
-        rel="noopener noreferrer"
-      >
-        <FaTwitter />
-      </a>
-      
-      <a 
-        href="https://instagram.com/fruitieveggie" 
-        target="_blank" 
-        rel="noopener noreferrer"
-      >
-        <FaInstagram />
-      </a>
-      
-                     </div>
-           
-                   
-             
-                <button
-                   onClick={scrollToTop}
-                   className="fixed bottom-6 right-6  bg-[#15281F] text-[#B5EF14] px-3 py-3 rounded-full shadow-lg hover:bg-yellow-400 hover:text-black transition"
-                 >
-                   <FaArrowUp className="w-5 h-5" />
-                 </button>
-            
-           
-           
-                     {/* Copyright */}
-                     <p className="text-xs text-gray-400">
-                       © 2025 All rights reserved
-                     </p>
-                   </div>
-                 </div>
+               <div className="mt-12 space-y-2 text-sm">
+                               <h3 className="font-semibold mb-5 text-lg">Reach Out to Us</h3>
+     
               
-            
-                 </footer>
+         <div className="space-y-4">
+           {/* Phone */}
+           <div className="flex items-center space-x-3">
+             <div className="p-2 bg-white/10 rounded-md">
+               <FaPhoneAlt className="text-lime-400 text-lg" />
+             </div>
+             <p className="text-gray-200">+2347051479418</p>
+           </div>
+     
+           {/* Email */}
+           <div className="flex items-center space-x-3">
+             <div className="p-2 bg-white/10 rounded-md">
+               <FaEnvelope className="text-lime-400 text-lg" />
+             </div>
+             <p className="text-gray-200">info@fruitieveggie.com</p>
+           </div>
+     
+           {/* Location */}
+           <div className="flex items-center space-x-3">
+             <div className="p-2 bg-white/10 rounded-md">
+               <FaMapMarkerAlt className="text-lime-400 text-lg" />
+             </div>
+             <p className="text-gray-200">
+Alado Village, Awowo, Ewekoro, Ogun State, Nigeria
+             </p>
+           </div>
+         </div>
+       
+     
+               </div>
+             </div>
+     
+             {/* Pages */}
+             <div>
+               <h4 className="font-semibold text-lg mb-4">Pages</h4>
+               <ul className="space-y-4 text-sm">
+                 <li className="hover:text-white">Contact </li>
+                 <li className="hover:text-white">Services</li>
+                 <li className="hover:text-white">About us</li>
+                 <li className="hover:text-white">Impact</li>
+                 <li className="hover:text-white">Contact us</li>
+               </ul>
+             </div>
+     
+             {/* Services */}
+             <div>
+               <h4 className="font-semibold text-lg mb-4">Services</h4>
+               <ul className="space-y-4 text-sm">
+                 <li className="hover:text-white">Farming & Cultivation</li>
+                 <li className="hover:text-white">Aggregate & Market Linkages</li>
+                 <li className="hover:text-white">Cold Storage & Logistics</li>
+                 <li className="hover:text-white">Value Addition</li>
+                 <li className="hover:text-white">Training & Capacity Building</li>
+               </ul>
+             </div>
+     
+             {/* Newsletter */}
+             <div>
+               <h4 className="font-semibold text-lg mb-4">
+                 Subscribe to our newsletter
+               </h4>
+               <form className="flex">
+              
+         <div className="relative w-full max-w-md">
+           <input
+             type="email"
+             placeholder="Add email address"
+             className="w-full p-3 pr-12 bg-[#15281F] rounded-md focus:outline-none text-white"
+           />
+           {/* Send Icon Button inside input */}
+            <a
+            href="mailto:info@fruitieveggie.com"
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-[#B5EF14] hover:text-lime-600"
+          >
+            <FaPaperPlane size={22} />
+          </a>
+         </div>
+       
+               </form>
+             </div>
+           </div>
+     
+           {/* Bottom Bar */}
+           <div className="border-t border-gray-600 mt-10 py-6">
+             <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+               {/* Socials */}
+               <div className="flex text-[#B5EF14] space-x-4">
+                <a 
+  href="https://www.facebook.com/Fruitieveggi" 
+  target="_blank" 
+  rel="noopener noreferrer"
+>
+  <FaFacebookF />
+</a>
+
+<a 
+  href="https://www.linkedin.com/company/fruitieveggie-farmacy/" 
+  target="_blank" 
+  rel="noopener noreferrer"
+>
+  <FaLinkedinIn />
+</a>
+
+<a 
+  href="https://www.x.com/Fruitieveggie_" 
+  target="_blank" 
+  rel="noopener noreferrer"
+>
+  <FaTwitter />
+</a>
+
+<a 
+  href="https://instagram.com/fruitieveggie" 
+  target="_blank" 
+  rel="noopener noreferrer"
+>
+  <FaInstagram />
+</a>
+
+               </div>
+     
+             
+       
+          <button
+             onClick={scrollToTop}
+             className="fixed bottom-6 right-6  bg-[#15281F] text-[#B5EF14] px-3 py-3 rounded-full shadow-lg hover:bg-yellow-400 hover:text-black transition"
+           >
+             <FaArrowUp className="w-5 h-5" />
+           </button>
+      
+     
+     
+               {/* Copyright */}
+               <p className="text-xs text-gray-400">
+                 © 2025 All rights reserved
+               </p>
+             </div>
+           </div>
+        
+      
+           </footer>
          </div>
   );
 };

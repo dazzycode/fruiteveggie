@@ -13,178 +13,534 @@ const Blog= () => {
       behavior: "smooth", // smooth scroll effect
     });
   };
-   const [isOpen, setIsOpen] = useState(false);
+  
+  const [isOpen, setIsOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
+  
+    const toggleDropdown = (menu) => {
+      setOpenDropdown(openDropdown === menu ? null : menu);
+    };
+    const toggleMenu = () => setIsOpen(!isOpen);
+    const closeMenu = () => setIsOpen(false);
+const media = [ 
+   "/storage3.jpg",
+  "/storage4.jpg",
+  "/storage5.jpg",
+  "/storage6.jpg",
+   "/logis1.jpg",
+  "/logis2.jpg",
+  "/logis3.jpg",
+  "/logis4.jpg",
+  "/storage1.jpg",
+  "/storage2.jpg",
+  "/storage7.jpg",
+  "/storagevid.mp4",
+  "/storagevid2.mp4",
+   "/storagevid3.mp4",
+  "/storagevid4.mp4",
+    "/value1.jpg",
+  "/value2.jpg",
+  "/value3.jpg",
+  "/value4.jpg",
+  "/value5.jpg",
+  "/value6.jpg",
+  "/valuevid.mp4",
+    "/agr1.jpg",
+  "/agr2.jpg",
+  "/agr3.jpg",
+  "/agr4.jpg",
+  "/agr5.jpg",
+  "/agr6.jpg",
+  "/agr.mp4",
+  "/agr2.mp4",
+  "/farming2.jpg",
+  "/farming3.jpg",
+  "/farming4.jpg",
+  "/farming5.jpg",
+  "/farming6.jpg",
+  "/farming7.jpg",
+   "/farming8.jpg",
+  "/farming10.jpg",
+  "/farming11.jpg",
+  "/farming.mp4",
+  "/farmingvid.mp4",
+   "/training1.jpg",
+  "/training2.jpg",
+  "/training3.jpg",
+  "/training4.jpg",
+  "/training5.jpg",
+  "/training6.jpg",
+   "/training7.jpg",
+  "/training8.jpg",
+  "/training9.jpg",
+  "/trainingvid.mp4",
+];
+ const faqs = [
+  {
+    question: "What is Fruitieveggie Farmacy Limited all about?",
+    answer:
+      "Fruitieveggie is an agricultural enterprise focused on reducing post-harvest losses, empowering farmers, and ensuring food security. We provide innovative post-harvest solutions, including cold storage, logistics, and market access for fresh produce.",
+  },
+  {
+    question: "Who do you work with?",
+    answer:
+      "We work with farmers, distributors, retailers, and consumers interested in fresh produce.",
+  },
+  {
+    question: "What makes Fruitieveggie different?",
+    answer:
+      "Our unique focus on sustainability, innovation, and farmer empowerment sets us apart. We reduce waste, improve logistics, and connect farmers directly with markets.",
+  },
+  {
+    question: "How can farmers benefit from Fruitieveggie?",
+    answer:
+      "Farmers benefit from access to cold storage, logistics, training, and improved market opportunities that increase profits and reduce losses.",
+  },
+  {
+    question: "Do you only serve farmers?",
+    answer:
+      "No. While farmers are a core part of our mission, we also serve distributors, retailers, and households that want fresh produce.",
+  },
+  {
+    question: "How does Fruitieveggie promote sustainability?",
+    answer:
+      "We help reduce food waste, encourage eco-friendly farming practices, and provide efficient storage and transport solutions to preserve freshness.",
+  },
+  {
+    question: "Can I partner with Fruitieveggie?",
+    answer:
+      "Yes. We welcome partnerships with individuals, organizations, and businesses aligned with our mission.",
+  },
+  {
+    question: "Do you provide training for farmers?",
+    answer:
+      "Yes. We train farmers in best agricultural practices, storage methods, and ways to access wider markets.",
+  },
+  {
+    question: "What products do you handle?",
+    answer:
+      "We handle fresh fruits, vegetables, and other perishable produce.",
+  },
+  {
+    question: "Can I visit your farm or facilities?",
+    answer:
+      "Yes, visits can be arranged. Please contact our support team to schedule one.",
+  },
+  {
+    question: "How do I place an order for fresh produce?",
+    answer:
+      "Orders can be placed through our website, mobile app, or customer service channels.",
+  },
+  {
+    question: "Do you deliver nationwide?",
+    answer:
+      "Yes. We deliver to several states nationwide through our logistics partners.",
+  },
+  {
+    question: "What is the minimum order size?",
+    answer:
+      "Minimum order size may vary depending on the type of produce. Contact us for details.",
+  },
+  {
+    question: "How do you ensure freshness during delivery?",
+    answer:
+      "We use cold chain logistics and proper packaging to ensure all produce arrives fresh.",
+  },
+  {
+    question: "How should I store the produce after purchase?",
+    answer:
+      "We provide storage tips for different produce to help customers preserve freshness after delivery.",
+  },
+  {
+    question: "Do you offer subscriptions or regular delivery services?",
+    answer:
+      "Yes. Customers can subscribe for weekly or monthly fresh produce delivery services.",
+  },
+  {
+    question: "What happens if my order arrives damaged or incomplete?",
+    answer:
+      "Please contact our support team immediately. We will arrange a replacement or refund.",
+  },
+  {
+    question: "Do you also sell processed products?",
+    answer:
+      "Our main focus is fresh produce, but we plan to introduce processed products in the future.",
+  },
+  {
+    question: "What payment options are available?",
+    answer:
+      "We accept debit/credit cards, bank transfers, and mobile payment options.",
+  },
+  {
+    question: "How can I contact Fruitieveggie?",
+    answer:
+      "You can reach us through email, phone, or the contact form on our website.",
+  },
+];
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
+  const [openIndex, setOpenIndex] = useState(null);
 
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
   return (
-    <div className="font-sans mt-10 px-3 text-gray-900">
+    <div className="font-sans mt-10 px-2 text-gray-900">
    
-    <nav className="fixed top-0 left-0 w-full bg-white shadow z-50">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Logo */}
-        <div className="flex items-center">
-          <img
-            src="/logo.png"
-            alt="Fruit&Veggie Logo"
-            className="h-10 w-auto"
-          />
-        </div>
-
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-6 text-gray-700 font-medium">
-          <li>
-            <Link
-              to="/"
-              className="hover:text-[#BDDA02] transition"
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/services"
-              className="hover:text-[#BDDA02] transition"
-            >
-              Services
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/about"
-              className="hover:text-[#BDDA02] transition"
-            >
-              About Us
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/impact"
-              className="hover:text-[#BDDA02] transition"
-            >
-              Impact
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/blog"
-              className="hover:text-[#BDDA02] transition"
-            >
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/contact"
-              className="hover:text-[#BDDA02] transition"
-            >
-              Contact Us
-            </Link>
-          </li>
-        </ul>
-
-        {/* Desktop CTA */}
-        <Link
-          to="/contact"
-          className="px-6 py-2 text-xs md:text-sm shadow-[0_0_10px_#BDDA02] hover:shadow-[0_0_20px_#BDDA02] 
-          rounded-lg font-semibold flex items-center gap-2 bg-[#BDDA02] text-black hidden md:flex"
-        >
-          Contact Us
-        </Link>
-
-        {/* Mobile Menu Button */}
-        <div className="md:hidden">
-          <button onClick={toggleMenu}>
-            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu Dropdown */}
-      {isOpen && (
-        <div className="md:hidden bg-white shadow-lg">
-          <ul className="flex flex-col gap-4 px-6 py-6 text-gray-700 font-medium">
-            <li>
-              <Link to="/" onClick={closeMenu} className="hover:text-[#BDDA02]">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/services" onClick={closeMenu} className="hover:text-[#BDDA02]">
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" onClick={closeMenu} className="hover:text-[#BDDA02]">
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link to="/impact" onClick={closeMenu} className="hover:text-[#BDDA02]">
-                Impact
-              </Link>
-            </li>
-            <li>
-              <Link to="/blog" onClick={closeMenu} className="hover:text-[#BDDA02]">
-                Blog
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" onClick={closeMenu} className="hover:text-[#BDDA02]">
-                Contact Us
-              </Link>
-            </li>
-          </ul>
-        </div>
-      )}
-    </nav>
+   <nav className="fixed top-0 left-0 w-full bg-white shadow z-50">
+           <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+             {/* Logo */}
+            <div className="flex items-center gap-2">
+       <img
+         src="/logor.png"
+         alt="Fruit&Veggie Logo"
+         className="h-12 w-auto"
+       />
+       <div className="flex flex-col leading-tight">
+         <h2 className="font-semibold text-lg">Fruitieveggie</h2>
+         <p className="text-sm text-gray-500">urban farm</p>
+       </div>
+     </div>
+     
+     
+             {/* Desktop Menu */}
+             <ul className="hidden md:flex gap-6 text-gray-700 font-medium">
+               <li>
+                 <Link
+                   to="/"
+                   className="hover:text-[#BDDA02] transition"
+                 >
+                   Home
+                 </Link>
+               </li>
+           
+           
+           <div className="relative">
+             <button
+               onClick={() => toggleDropdown("about")}
+               className="hover:underline flex items-center gap-1"
+             >
+               About Us
+               <svg
+                 className="w-3 h-3 mt-[2px]"
+                 fill="none"
+                 stroke="currentColor"
+                 viewBox="0 0 24 24"
+               >
+                 <path
+                   strokeLinecap="round"
+                   strokeLinejoin="round"
+                   strokeWidth="2"
+                   d="M19 9l-7 7-7-7"
+                 />
+               </svg>
+             </button>
+             {openDropdown === "about" && (
+               <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-lg z-50">
+                 {[
+                    { name: "Vision and Mission", path: "/vission" },
+                   { name: "Theory of Change", path: "/theory" },
+                   { name: "Our story", path: "/story" },
+                   { name: "Core Values", path: "/values" },
+                 { name: "Leadership Team", path: "/leadership" },
+                 ].map((col) => (
+                   <Link
+                     key={col.name}
+                     to={col.path}
+                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                   >
+                     {col.name}
+                   </Link>
+                 ))}
+               </div>
+             )}
+           </div>
+     
+           {/* Services with dropdown */}
+           <div className="relative">
+             <button
+               onClick={() => toggleDropdown("services")}
+               className="hover:underline flex items-center gap-1"
+             >
+               Services
+               <svg
+                 className="w-3 h-3 mt-[2px]"
+                 fill="none"
+                 stroke="currentColor"
+                 viewBox="0 0 24 24"
+               >
+                 <path
+                   strokeLinecap="round"
+                   strokeLinejoin="round"
+                   strokeWidth="2"
+                   d="M19 9l-7 7-7-7"
+                 />
+               </svg>
+             </button>
+             {openDropdown === "services" && (
+               <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-lg z-50">
+                 {[
+                 { name: "Farming ", path: "/farming" },
+                   { name: "Aggregation & Market Linkages", path: "/aggregation" },
+                    { name: "Cold Storage & Logistics", path: "/storage" },
+                   { name: "Value Addition ", path: "/value" },
+                   { name: "Training & Capacity Building", path: "/training" },
+                 ].map((srv) => (
+                   <Link
+                     key={srv.name}
+                     to={srv.path}
+                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                   >
+                     {srv.name}
+                   </Link>
+                 ))}
+               </div>
+             )}
+         </div>
+               <li>
+                 <Link
+                   to="/impact"
+                   className="hover:text-[#BDDA02] transition"
+                 >
+                   Impact
+                 </Link>
+               </li>
+               <li>
+                 <Link
+                   to="/resources"
+                   className="hover:text-[#BDDA02] transition"
+                 >
+                   Resources
+                 </Link>
+               </li>
+               <li>
+                 <Link
+                   to="/contact"
+                   className="hover:text-[#BDDA02] transition"
+                 >
+                   Contact Us
+                 </Link>
+               </li>
+             </ul>
+     
+             {/* Desktop CTA */}
+             <Link
+               to="/contact"
+               className="px-6 py-2 text-xs md:text-sm shadow-[0_0_10px_#BDDA02] hover:shadow-[0_0_20px_#BDDA02] 
+               rounded-lg font-semibold flex items-center gap-2 bg-[#BDDA02] text-black hidden md:flex"
+             >
+               Contact Us
+             </Link>
+     
+             {/* Mobile Menu Button */}
+             <div className="md:hidden">
+               <button onClick={toggleMenu}>
+                 {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+               </button>
+             </div>
+           </div>
+     
+           {/* Mobile Menu Dropdown */}
+           {isOpen && (
+             <div className="md:hidden bg-white shadow-lg">
+               <ul className="flex flex-col gap-4 px-6 py-6 text-gray-700 font-medium">
+                 <li>
+                   <Link to="/" onClick={closeMenu} className="hover:text-[#BDDA02]">
+                     Home
+                   </Link>
+                 </li>
+                 <li>
+                   <div className="relative">
+             <button
+               onClick={() => toggleDropdown("about")}
+               className="hover:underline flex items-center gap-1"
+             >
+               About Us
+               <svg
+                 className="w-3 h-3 mt-[2px]"
+                 fill="none"
+                 stroke="currentColor"
+                 viewBox="0 0 24 24"
+               >
+                 <path
+                   strokeLinecap="round"
+                   strokeLinejoin="round"
+                   strokeWidth="2"
+                   d="M19 9l-7 7-7-7"
+                 />
+               </svg>
+             </button>
+             {openDropdown === "about" && (
+               <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-lg z-50">
+                 {[
+                   { name: "Vision and Mission", path: "/vission" },
+                   { name: "Theory of Change", path: "/theory" },
+                   { name: "Our story", path: "/story" },
+                   { name: "Core Values", path: "/values" },
+                 { name: "Leadership Team", path: "/leadership" },
+                 ].map((col) => (
+                   <Link
+                     key={col.name}
+                     to={col.path}
+                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                   >
+                     {col.name}
+                   </Link>
+                 ))}
+               </div>
+             )}
+           </div>
+     
+           {/* Services with dropdown */}
+           <div className=" mt-3 relative">
+             <button
+               onClick={() => toggleDropdown("services")}
+               className="hover:underline flex items-center gap-1"
+             >
+               Services
+               <svg
+                 className="w-3 h-3 mt-[2px]"
+                 fill="none"
+                 stroke="currentColor"
+                 viewBox="0 0 24 24"
+               >
+                 <path
+                   strokeLinecap="round"
+                   strokeLinejoin="round"
+                   strokeWidth="2"
+                   d="M19 9l-7 7-7-7"
+                 />
+               </svg>
+             </button>
+             {openDropdown === "services" && (
+               <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-lg z-50">
+                 {[
+                   { name: "Farming ", path: "/farming" },
+                   { name: "Aggregation & Market Linkages", path: "/aggregation" },
+                    { name: "Cold Storage & Logistics", path: "/storage" },
+                   { name: "Value Addition ", path: "/value" },
+                   { name: "Training & Capacity Building", path: "/training" },
+  
+                 ].map((srv) => (
+                   <Link
+                     key={srv.name}
+                     to={srv.path}
+                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                   >
+                     {srv.name}
+                   </Link>
+                 ))}
+               </div>
+             )}
+         </div>
+                 </li>
+                 <li>
+                   <Link to="/impact" onClick={closeMenu} className="hover:text-[#BDDA02]">
+                     Impact
+                   </Link>
+                 </li>
+                 <li>
+                   <Link to="/resources" onClick={closeMenu} className="hover:text-[#BDDA02]">
+                    Resources
+                   </Link>
+                 </li>
+                 <li>
+                   <Link to="/contact" onClick={closeMenu} className="hover:text-[#BDDA02]">
+                     Contact Us
+                   </Link>
+                 </li>
+               </ul>
+             </div>
+           )}
+         </nav>
  
       {/* Hero */}
       <section
         id="home"
-        className="relative md:min-h-[80vh] min-h-[60vh] flex mx-auto mt-20 max-w-4xl   text-white"
+        className="relative md:min-h-[80vh] min-h-[60vh] flex mx-auto mt-20 w-full  text-white"
       >
         <img
-          src="/blog.jpg"
+          src="/farm1.jpg"
           alt="Agriculture"
-          className="absolute inset-0 w-full h-full object-cover rounded-b-2xl"
+          className="absolute inset-0 w-full h-full object-cover "
         />
-        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-b-2xl" />
+        <div className="absolute inset-0 bg-black bg-opacity-40 " />
        <div className="relative mt-40 md:mt-0  text-left mt-20 md:mt-40 z-20 max-w-2xl px-4">
-  <h1 className="text-2xl md:text-4xl font-bold">
-    Agriculture is more than planting and harvesting
-  </h1>
-  <p className="mt-4 text-xs md:text-sm">
-    Women make up a significant share of the agricultural workforce, especially in 
-    smallholder farming communities. Despite their contributions, many women farmers 
-    still face challenges such as limited access to land, credit, training, and 
-    modern farming tools. These barriers reduce productivity and keep women from 
-    benefiting fully from the value they create.
-  </p>
+ <h1 className="text-2xl md:text-4xl font-bold">
+  Agriculture is more than planting and harvesting
+</h1>
+<p className="mt-4 text-xs md:text-lg">
+  At Fruiteveggie Limited, we believe agriculture is the backbone of
+  sustainable communities. It goes beyond planting and harvesting —
+  it is about nourishing people, empowering farmers, and building
+  resilient food systems. By integrating innovation with traditional
+  knowledge, we create opportunities for women and youth, reduce
+  post-harvest losses, and promote climate-smart practices that secure
+  the future of food across Africa.
+</p>
 
-  {/* Learn More Button */}
- <a
-  href="https://www.linkedin.com/posts/fruitieveggie-farmacy_fruitieveggie-sustainableagriculture-fruitfarm-activity-7363550398697070597-NtD7?utm_source=share&utm_medium=member_android&rcm=ACoAAEJvylMBgC9aj1hM7Xq5UTK1bMxo7sSlyWQ"  
-  target="_blank"             
-  rel="noopener noreferrer" >  
-  <button className="md:px-6 px-3 py-2 mt-3 rounded-lg text-xs md:text-sm font-semibold flex items-center justify-center gap-2 
-    border border-[#BDDA02] text-[#BDDA02] 
-    shadow-[0_0_10px_#BDDA02] hover:shadow-[0_0_20px_#BDDA02] 
-    transition duration-300 ease-in-out active:scale-95"
->
-  Learn More ➔</button>
-</a>
+ 
 
 </div>
 
       </section>
 
       {/* Blog Section */}
-      <section id="blog" className="py-16 max-w-5xl mx-auto bg-white">
-        <h2 className="text-center text-2xl font-bold mb-10">
-News & Stories        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <div id="blog" className="py-6 px-3 max-w-6xl mx-auto bg-white">
+             <h2 className="text-center text-2xl md:text-3xl  font-bold mb-8">
+        Gallery
+      </h2>
+     <div className="grid grid-cols-2 md:grid-cols-3 mt-5 lg:grid-cols-4 gap-4">
+  {media.map((item, i) => {
+    const isVideo = item.endsWith(".mp4");
+    return isVideo ? (
+      <video
+        key={i}
+        src={item}
+        controls
+        className="w-full h-40 object-cover rounded-lg shadow-md"
+      />
+    ) : (
+      <img
+        key={i}
+        src={item}
+        alt={`Farm ${i + 1}`}
+        className="w-full h-40 object-cover rounded-lg shadow-md"
+      />
+    );
+  })}
+</div></div>
+ <div className="max-w-3xl mx-auto py-12 px-4">
+      <h2 className="text-center text-2xl md:text-3xl font-bold mb-8">
+        Frequently Asked Questions (FAQs)
+      </h2>
+
+      <div className="space-y-4">
+        {faqs.map((faq, index) => (
+          <div key={index} className="border-b pb-2">
+            <button
+              onClick={() => toggleFAQ(index)}
+              className="w-full flex justify-between items-center text-left font-medium text-gray-800 hover:text-green-600 focus:outline-none"
+            >
+              {faq.question}
+              <span className="ml-2 text-xl">
+                {openIndex === index ? "−" : "+"}
+              </span>
+            </button>
+            <div
+              className={`mt-2 text-gray-600 transition-all duration-300 overflow-hidden ${
+                openIndex === index ? "max-h-40" : "max-h-0"
+              }`}
+            >
+              <p className="text-sm leading-relaxed">{faq.answer}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+          <div id="blog" className="py-6 px-2  max-w-5xl mx-auto bg-white">
+             <h2 className="text-center text-2xl md:text-3xl  font-bold mb-8">
+        News & Blog
+      </h2> <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* Blog 1 */}
           <div>
             <img
@@ -204,7 +560,7 @@ News & Stories        </h2>
     href="https://www.linkedin.com/posts/fruitieveggie-farmacy_fruitieveggie-sustainableagriculture-fruitfarm-activity-7363550398697070597-NtD7?utm_source=share&utm_medium=member_android&rcm=ACoAAEJvylMBgC9aj1hM7Xq5UTK1bMxo7sSlyWQ"
     target="_blank"
     rel="noopener noreferrer"
-    className="mt-2 inline-block text-green-600 font-medium"
+    className="mt-2 inline-block text-xs md:text-base  text-green-600 font-medium"
   >
     Learn more →
   </a>
@@ -229,7 +585,7 @@ News & Stories        </h2>
     href="https://www.linkedin.com/posts/fruitieveggie-farmacy_fruitieveggie-sustainableagriculture-fruitfarm-activity-7363550398697070597-NtD7?utm_source=share&utm_medium=member_android&rcm=ACoAAEJvylMBgC9aj1hM7Xq5UTK1bMxo7sSlyWQ"
     target="_blank"
     rel="noopener noreferrer"
-    className="mt-2 inline-block text-green-600 font-medium"
+    className="mt-2 inline-block text-xs md:text-base text-green-600 font-medium"
   >
     Learn more →
   </a>
@@ -253,7 +609,7 @@ News & Stories        </h2>
     href="https://www.linkedin.com/posts/fruitieveggie-farmacy_fruitieveggie-sustainableagriculture-fruitfarm-activity-7362427703175569408-Lt1P?utm_source=share&utm_medium=member_android&rcm=ACoAAEJvylMBgC9aj1hM7Xq5UTK1bMxo7sSlyWQ"
     target="_blank"
     rel="noopener noreferrer"
-    className="mt-2 inline-block text-green-600 font-medium"
+    className="mt-2 inline-block text-xs md:text-base text-green-600 font-medium"
   >
     Learn more →
   </a>
@@ -277,14 +633,12 @@ News & Stories        </h2>
     href="https://www.linkedin.com/posts/fruitieveggie-farmacy_fruitieveggie-sustainableagriculture-fruitfarm-activity-7362427703175569408-Lt1P?utm_source=share&utm_medium=member_android&rcm=ACoAAEJvylMBgC9aj1hM7Xq5UTK1bMxo7sSlyWQ"
     target="_blank"
     rel="noopener noreferrer"
-    className="mt-2 inline-block text-green-600 font-medium"
+    className="mt-2 inline-block text-xs md:text-base text-green-600 font-medium"
   >
     Learn more →
   </a>
           </div>
-        </div>
-      </section>
-
+        </div></div>
       {/* FOOTER */}
       <footer className="bg-green-950 text-white   mt-2 relative z-10">
             <div className="max-w-5xl mx-auto py-16 px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
@@ -311,7 +665,7 @@ News & Stories        </h2>
              <div className="p-2 bg-white/10 rounded-md">
                <FaPhoneAlt className="text-lime-400 text-lg" />
              </div>
-             <p className="text-gray-200">+234 704 757 8249</p>
+             <p className="text-gray-200">+2347051479418</p>
            </div>
      
            {/* Email */}
@@ -319,7 +673,7 @@ News & Stories        </h2>
              <div className="p-2 bg-white/10 rounded-md">
                <FaEnvelope className="text-lime-400 text-lg" />
              </div>
-             <p className="text-gray-200">smith@fruitnveggis.com</p>
+             <p className="text-gray-200">info@fruitieveggie.com</p>
            </div>
      
            {/* Location */}
@@ -328,7 +682,7 @@ News & Stories        </h2>
                <FaMapMarkerAlt className="text-lime-400 text-lg" />
              </div>
              <p className="text-gray-200">
-               Adejo Village, Awooro, Devotion, Ogun State, Nigeria.
+Alado Village, Awowo, Ewekoro, Ogun State, Nigeria
              </p>
            </div>
          </div>
@@ -376,7 +730,7 @@ News & Stories        </h2>
            />
            {/* Send Icon Button inside input */}
             <a
-            href="mailto:smith@fruitnveggis.com"
+            href="mailto:info@fruitieveggie.com"
             className="absolute right-3 top-1/2 -translate-y-1/2 text-[#B5EF14] hover:text-lime-600"
           >
             <FaPaperPlane size={22} />
