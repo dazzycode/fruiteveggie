@@ -358,7 +358,7 @@ const media = [
            </nav>
  
       {/* Hero */}
-      <section
+      <div
         id="home"
         className="relative md:min-h-[80vh] min-h-[60vh] flex mx-auto mt-20 w-full  text-white"
       >
@@ -386,7 +386,7 @@ const media = [
 
 </div>
 
-      </section>
+      </div>
 
       {/* Blog Section */}
       <div id="blog" className="py-6 px-3 max-w-6xl mx-auto bg-white">

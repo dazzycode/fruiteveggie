@@ -356,7 +356,7 @@ const [openDropdown, setOpenDropdown] = useState(null);
               )}
             </nav>
     {/* Hero Section */}
-<section
+<div
   id="home"
   className="relative md:min-h-[80vh] min-h-[50vh] mt-20 flex items-center w-full  text-left text-white"
 >
@@ -380,7 +380,7 @@ const [openDropdown, setOpenDropdown] = useState(null);
       but in lives transformed, food saved, and communities empowered.
     </p>
   </div>
-</section>
+</div>
 
 
       {/* Impact Stats */}

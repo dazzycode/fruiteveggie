@@ -373,7 +373,7 @@ Darlington remains dedicated to shaping a future where farming not only sustains
              </nav>
 
       {/* HERO */}
-     <section
+     <div
   id="home"
   className="relative md:min-h-[80vh] min-h-[50vh] mt-20 flex items-center w-full  text-left text-white"
 >
@@ -402,7 +402,7 @@ Darlington remains dedicated to shaping a future where farming not only sustains
                  </button></Link>
                </div>
           
-           </section>
+           </div>
  
       {/* ================= LEADERSHIP ================= */}
      <div className="w-full bg-gray-100 py-16">

@@ -304,7 +304,7 @@ const media = [
               )}
             </nav>
        {/* HERO */}
-           <section className="relative w-full h-auto md:mt-20  mt-10 min-h-[60vh] md:min-h-[80vh]">
+           <div className="relative w-full h-auto md:mt-20  mt-10 min-h-[60vh] md:min-h-[80vh]">
              <img
                src="/blog1.png"
                alt="Hero"
@@ -323,7 +323,7 @@ const media = [
                  Partner with us <FaArrowRight />
                </button></a>
              </div>
-           </section>
+           </div>
      
            {/* SERVICES */}
          

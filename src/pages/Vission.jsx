@@ -296,7 +296,7 @@ const [openDropdown, setOpenDropdown] = useState(null);
 
 
       {/* HERO */}
-   <section
+   <div
   id="home"
   className="relative md:min-h-[80vh] min-h-[50vh] mt-20 flex items-center w-full  text-left text-white"
 >
@@ -331,7 +331,7 @@ const [openDropdown, setOpenDropdown] = useState(null);
       </Link>
     </div>
  
-</section>
+</div>
 
 
        {/* VISION & MISSION (also centered, not full width) */}

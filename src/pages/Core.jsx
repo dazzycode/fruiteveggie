@@ -294,7 +294,7 @@ const [openDropdown, setOpenDropdown] = useState(null);
               )}
             </nav>
       {/* HERO */}
-     <section
+     <div
   id="home"
   className="relative md:min-h-[80vh] min-h-[50vh] mt-20 flex items-center w-full  text-left text-white"
 >
@@ -323,7 +323,7 @@ const [openDropdown, setOpenDropdown] = useState(null);
                  </button></Link>
                </div>
             
-           </section>
+           </div>
  {/* ================= CORE VALUES ================= */}
        <div className="w-full bg-green-100 py-6">
          <div className="max-w-4xl mx-auto px-6 text-center">

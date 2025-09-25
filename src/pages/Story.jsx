@@ -297,7 +297,7 @@ const [openDropdown, setOpenDropdown] = useState(null);
 
 
       {/* HERO */}
-     <section
+     <div
   id="home"
   className="relative md:min-h-[80vh] min-h-[50vh] mt-20 flex items-center w-full  text-left text-white"
 >
@@ -326,7 +326,7 @@ Connecting farmers to fair markets and better futures.
                  </button></Link>
                </div>
            
-           </section>
+           </div>
  <div className="w-full py-6">
         <div className="max-w-4xl mx-auto bg-white rounded-2xl overflow-hidden shadow">
          

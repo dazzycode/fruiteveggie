@@ -309,7 +309,7 @@ const media = [
               )}
             </nav>
        {/* HERO */}
-           <section className="relative w-full h-auto md:mt-20  mt-10 min-h-[60vh] md:min-h-[80vh]">
+           <div className="relative w-full h-auto md:mt-20  mt-10 min-h-[60vh] md:min-h-[80vh]">
              <img
                src="/storage1.jpg"
                alt="Hero"
@@ -328,7 +328,7 @@ const media = [
                  Partner with us <FaArrowRight />
                </button></a>
              </div>
-           </section>
+           </div>
      
            {/* SERVICES */}
          
@@ -339,7 +339,7 @@ const media = [
 
 
 
-    <section className="max-w-6xl mx-auto px-4 py-12 gap-10 items-center">
+    <div className="max-w-6xl mx-auto px-4 py-12 gap-10 items-center">
       {/* Text Section */}
       <div className="space-y-6">
         <h2 className="text-2xl md:text-4xl font-bold text-[#264733]">
@@ -371,7 +371,7 @@ With solar-powered cooling systems, mobile cold chain vehicles, and centralized 
     );
   })}
 </div>
-    </section>
+    </div>
     
       {/* FOOTER */}
      <footer className="bg-green-950 text-white   mt-2 relative z-10">

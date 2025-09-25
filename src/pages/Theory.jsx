@@ -295,7 +295,7 @@ const [openDropdown, setOpenDropdown] = useState(null);
              </nav>
 
       {/* HERO */}
-   <section
+   <div
   id="home"
   className="relative md:min-h-[80vh] min-h-[50vh] mt-20  flex items-center w-full  text-left text-white"
 >
@@ -323,7 +323,7 @@ Theory  of Change                 </h1>
                  </button></Link>
                </div>
            
-           </section>
+           </div>
 
       {/* THEORY OF CHANGE (full-width bg image, centered container) */}
     

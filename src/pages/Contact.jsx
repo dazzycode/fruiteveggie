@@ -6,7 +6,36 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
  
 const Contact= () => {
- 
+ const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const subject = `New Contact Form Submission from ${formData.firstName} ${formData.lastName}`;
+    const body = `
+First Name: ${formData.firstName}
+Last Name: ${formData.lastName}
+Email: ${formData.email}
+Phone: ${formData.phone}
+
+Message:
+${formData.message}
+    `;
+
+    window.location.href = `mailto:info@fruitieveggie.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+  };
 
    const scrollToTop = () => {
     window.scrollTo({
@@ -299,84 +328,94 @@ const Contact= () => {
              )}
            </nav>
       {/* Hero Image */}
-      <section className="relative min-h-[60vh] md:min-h-[80vh] flex mx-auto mt-20 w-full   text-white"
+      <div className="relative min-h-[60vh] md:min-h-[80vh] flex mx-auto mt-20 w-full   text-white"
 >
         <img
           src="/faq.png"
           alt="Contact Hero"
           className="absolute inset-0 w-full h-full object-cover rounded-b-2xl"
         />
-      </section>
+      </div>
 
-      {/* Contact Form */}
-      <section id="contact" className="py-12 px-3 md:px-6 w-full md:max-w-4xl mx-auto">
-        <div className="bg-white rounded-xl shadow p-4 md:p-8">
-          <h2 className="text-center text-lg mb-8">
-            Simply fill in your details and submit the form below, and we’ll
-            respond as quickly as possible.
-          </h2>
-       <form
-  action="mailto:info@fruitieveggie.com"
-  method="GET"
-  encType="text/plain"
-  className="space-y-6"
->
+    
+  c
 
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-    <input
-      type="text"
-  name="firstName"
-      placeholder="First Name"
-      className="border p-3 rounded-md w-full"
-      required
-    />
-    <input
-      type="text"
-      name="lastName"
-      placeholder="Last Name"
-      className="border p-3 rounded-md w-full"
-      required
-    />
-  </div>
+    <section
+      id="contact"
+      className="py-12 px-3 md:px-6 w-full md:max-w-4xl mx-auto"
+    >
+      <div className="bg-white rounded-xl shadow p-4 md:p-8">
+        <h2 className="text-center text-lg mb-8">
+          Simply fill in your details and submit the form below, and we’ll
+          respond as quickly as possible.
+        </h2>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-    <input
-      type="email"
-      name="email"
-      placeholder="Email Address"
-      className="border p-3 rounded-md w-full"
-      required
-    />
-    <input
-      type="text"
-      name="phone"
-      placeholder="Phone Number"
-      className="border p-3 rounded-md w-full"
-    />
-  </div>
+        <form onSubmit={handleSubmit} className="space-y-6">
+          {/* Full Name */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input
+              type="text"
+              name="firstName"
+              placeholder="First Name"
+              value={formData.firstName}
+              onChange={handleChange}
+              className="border p-3 rounded-md w-full"
+              required
+            />
+            <input
+              type="text"
+              name="lastName"
+              placeholder="Last Name"
+              value={formData.lastName}
+              onChange={handleChange}
+              className="border p-3 rounded-md w-full"
+              required
+            />
+          </div>
 
-  <textarea
-    name="message"
-    placeholder="Tell us how we can help"
-    rows="5"
-    className="border p-3 rounded-md w-full"
-    required
-  ></textarea>
+          {/* Email & Phone */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              value={formData.email}
+              onChange={handleChange}
+              className="border p-3 rounded-md w-full"
+              required
+            />
+            <input
+              type="text"
+              name="phone"
+              placeholder="Phone Number"
+              value={formData.phone}
+              onChange={handleChange}
+              className="border p-3 rounded-md w-full"
+            />
+          </div>
 
-  <button
-    type="submit"
-    className="bg-lime-400 hover:bg-lime-500 text-black px-6 py-3 rounded-md font-semibold"
-  >
-    Submit Form
-  </button>
-</form>
+          {/* Message */}
+          <textarea
+            name="message"
+            placeholder="Tell us how we can help"
+            rows="5"
+            value={formData.message}
+            onChange={handleChange}
+            className="border p-3 rounded-md w-full"
+            required
+          ></textarea>
 
-        </div>
-      </section>
-
-   
-
-   
+          {/* Submit */}
+          <button
+            type="submit"
+            className="bg-lime-400 hover:bg-lime-500 text-black px-6 py-3 rounded-md font-semibold"
+          >
+            Submit Form
+          </button>
+        </form>
+      </div>
+    </section>
+  
   
       {/* FOOTER */}
       <footer className="bg-green-950 text-white   mt-2 relative z-10">
