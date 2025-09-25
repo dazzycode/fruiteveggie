@@ -74,384 +74,288 @@ const media = [
   "/training8.jpg",
   "/training9.jpg",
   "/trainingvid.mp4",
+   "/training10.jpg",
+  "/training11.jpg",
+  "/training12.jpg",
+  "/training13.jpg",
+  "/training14.jpg",
+  "/training15.jpg",
+   "/training16.jpg",
+  "/training17.jpg",
+  "/training18.jpg",
+   "/training19.jpg",
+  "/training20.jpg",
 ];
- const faqs = [
-  {
-    question: "What is Fruitieveggie Farmacy Limited all about?",
-    answer:
-      "Fruitieveggie is an agricultural enterprise focused on reducing post-harvest losses, empowering farmers, and ensuring food security. We provide innovative post-harvest solutions, including cold storage, logistics, and market access for fresh produce.",
-  },
-  {
-    question: "Who do you work with?",
-    answer:
-      "We work with farmers, distributors, retailers, and consumers interested in fresh produce.",
-  },
-  {
-    question: "What makes Fruitieveggie different?",
-    answer:
-      "Our unique focus on sustainability, innovation, and farmer empowerment sets us apart. We reduce waste, improve logistics, and connect farmers directly with markets.",
-  },
-  {
-    question: "How can farmers benefit from Fruitieveggie?",
-    answer:
-      "Farmers benefit from access to cold storage, logistics, training, and improved market opportunities that increase profits and reduce losses.",
-  },
-  {
-    question: "Do you only serve farmers?",
-    answer:
-      "No. While farmers are a core part of our mission, we also serve distributors, retailers, and households that want fresh produce.",
-  },
-  {
-    question: "How does Fruitieveggie promote sustainability?",
-    answer:
-      "We help reduce food waste, encourage eco-friendly farming practices, and provide efficient storage and transport solutions to preserve freshness.",
-  },
-  {
-    question: "Can I partner with Fruitieveggie?",
-    answer:
-      "Yes. We welcome partnerships with individuals, organizations, and businesses aligned with our mission.",
-  },
-  {
-    question: "Do you provide training for farmers?",
-    answer:
-      "Yes. We train farmers in best agricultural practices, storage methods, and ways to access wider markets.",
-  },
-  {
-    question: "What products do you handle?",
-    answer:
-      "We handle fresh fruits, vegetables, and other perishable produce.",
-  },
-  {
-    question: "Can I visit your farm or facilities?",
-    answer:
-      "Yes, visits can be arranged. Please contact our support team to schedule one.",
-  },
-  {
-    question: "How do I place an order for fresh produce?",
-    answer:
-      "Orders can be placed through our website, mobile app, or customer service channels.",
-  },
-  {
-    question: "Do you deliver nationwide?",
-    answer:
-      "Yes. We deliver to several states nationwide through our logistics partners.",
-  },
-  {
-    question: "What is the minimum order size?",
-    answer:
-      "Minimum order size may vary depending on the type of produce. Contact us for details.",
-  },
-  {
-    question: "How do you ensure freshness during delivery?",
-    answer:
-      "We use cold chain logistics and proper packaging to ensure all produce arrives fresh.",
-  },
-  {
-    question: "How should I store the produce after purchase?",
-    answer:
-      "We provide storage tips for different produce to help customers preserve freshness after delivery.",
-  },
-  {
-    question: "Do you offer subscriptions or regular delivery services?",
-    answer:
-      "Yes. Customers can subscribe for weekly or monthly fresh produce delivery services.",
-  },
-  {
-    question: "What happens if my order arrives damaged or incomplete?",
-    answer:
-      "Please contact our support team immediately. We will arrange a replacement or refund.",
-  },
-  {
-    question: "Do you also sell processed products?",
-    answer:
-      "Our main focus is fresh produce, but we plan to introduce processed products in the future.",
-  },
-  {
-    question: "What payment options are available?",
-    answer:
-      "We accept debit/credit cards, bank transfers, and mobile payment options.",
-  },
-  {
-    question: "How can I contact Fruitieveggie?",
-    answer:
-      "You can reach us through email, phone, or the contact form on our website.",
-  },
-];
-
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-  return (
-    <div className="font-sans mt-10 px-2 text-gray-900">
+ return (
+    <div className=" mt-10 min-h-screen w-full  px-2 text-gray-900">
    
-   <nav className="fixed top-0 left-0 w-full bg-white shadow z-50">
-           <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-             {/* Logo */}
-            <div className="flex items-center gap-2">
-       <img
-         src="/logor.png"
-         alt="Fruit&Veggie Logo"
-         className="h-12 w-auto"
-       />
-       <div className="flex flex-col leading-tight">
-         <h2 className="font-semibold text-lg">Fruitieveggie</h2>
-         <p className="text-sm text-gray-500">urban farm</p>
-       </div>
-     </div>
-     
-     
-             {/* Desktop Menu */}
-             <ul className="hidden md:flex gap-6 text-gray-700 font-medium">
-               <li>
-                 <Link
-                   to="/"
-                   className="hover:text-[#BDDA02] transition"
-                 >
-                   Home
-                 </Link>
-               </li>
-           
-           
-           <div className="relative">
-             <button
-               onClick={() => toggleDropdown("about")}
-               className="hover:underline flex items-center gap-1"
-             >
-               About Us
-               <svg
-                 className="w-3 h-3 mt-[2px]"
-                 fill="none"
-                 stroke="currentColor"
-                 viewBox="0 0 24 24"
-               >
-                 <path
-                   strokeLinecap="round"
-                   strokeLinejoin="round"
-                   strokeWidth="2"
-                   d="M19 9l-7 7-7-7"
-                 />
-               </svg>
-             </button>
-             {openDropdown === "about" && (
-               <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-lg z-50">
-                 {[
-                    { name: "Vision and Mission", path: "/vission" },
-                   { name: "Theory of Change", path: "/theory" },
-                   { name: "Our story", path: "/story" },
-                   { name: "Core Values", path: "/values" },
-                 { name: "Leadership Team", path: "/leadership" },
-                 ].map((col) => (
-                   <Link
-                     key={col.name}
-                     to={col.path}
-                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                   >
-                     {col.name}
-                   </Link>
-                 ))}
-               </div>
-             )}
-           </div>
-     
-           {/* Services with dropdown */}
-           <div className="relative">
-             <button
-               onClick={() => toggleDropdown("services")}
-               className="hover:underline flex items-center gap-1"
-             >
-               Services
-               <svg
-                 className="w-3 h-3 mt-[2px]"
-                 fill="none"
-                 stroke="currentColor"
-                 viewBox="0 0 24 24"
-               >
-                 <path
-                   strokeLinecap="round"
-                   strokeLinejoin="round"
-                   strokeWidth="2"
-                   d="M19 9l-7 7-7-7"
-                 />
-               </svg>
-             </button>
-             {openDropdown === "services" && (
-               <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-lg z-50">
-                 {[
-                 { name: "Farming ", path: "/farming" },
-                   { name: "Aggregation & Market Linkages", path: "/aggregation" },
-                    { name: "Cold Storage & Logistics", path: "/storage" },
-                   { name: "Value Addition ", path: "/value" },
-                   { name: "Training & Capacity Building", path: "/training" },
-                 ].map((srv) => (
-                   <Link
-                     key={srv.name}
-                     to={srv.path}
-                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                   >
-                     {srv.name}
-                   </Link>
-                 ))}
-               </div>
-             )}
+  <nav className="fixed top-0 left-0 w-full bg-white shadow z-50">
+             <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+               {/* Logo */}
+              <div className="flex items-center gap-1">
+         <img
+           src="/logor.png"
+           alt="Fruit&Veggie Logo"
+           className="h-16 w-20"
+         />
+         <div className="flex flex-col leading-tight">
+           <h2 className="font-semibold text-sm md:text-lg">Fruitieveggie</h2>
+         <p className="md:text-sm text-xs text-gray-500">urban farm</p>
          </div>
-               <li>
-                 <Link
-                   to="/impact"
-                   className="hover:text-[#BDDA02] transition"
-                 >
-                   Impact
-                 </Link>
-               </li>
-               <li>
-                 <Link
-                   to="/resources"
-                   className="hover:text-[#BDDA02] transition"
-                 >
-                   Resources
-                 </Link>
-               </li>
-               <li>
-                 <Link
-                   to="/contact"
-                   className="hover:text-[#BDDA02] transition"
-                 >
-                   Contact Us
-                 </Link>
-               </li>
-             </ul>
-     
-             {/* Desktop CTA */}
-             <Link
-               to="/contact"
-               className="px-6 py-2 text-xs md:text-sm shadow-[0_0_10px_#BDDA02] hover:shadow-[0_0_20px_#BDDA02] 
-               rounded-lg font-semibold flex items-center gap-2 bg-[#BDDA02] text-black hidden md:flex"
-             >
-               Contact Us
-             </Link>
-     
-             {/* Mobile Menu Button */}
-             <div className="md:hidden">
-               <button onClick={toggleMenu}>
-                 {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-               </button>
-             </div>
-           </div>
-     
-           {/* Mobile Menu Dropdown */}
-           {isOpen && (
-             <div className="md:hidden bg-white shadow-lg">
-               <ul className="flex flex-col gap-4 px-6 py-6 text-gray-700 font-medium">
+       </div>
+       
+       
+               {/* Desktop Menu */}
+               <ul className="hidden md:flex gap-6 text-gray-700 font-medium">
                  <li>
-                   <Link to="/" onClick={closeMenu} className="hover:text-[#BDDA02]">
+                   <Link
+                     to="/"
+                     className="hover:text-[#BDDA02] transition"
+                   >
                      Home
                    </Link>
                  </li>
-                 <li>
-                   <div className="relative">
-             <button
-               onClick={() => toggleDropdown("about")}
-               className="hover:underline flex items-center gap-1"
-             >
-               About Us
-               <svg
-                 className="w-3 h-3 mt-[2px]"
-                 fill="none"
-                 stroke="currentColor"
-                 viewBox="0 0 24 24"
+             
+             
+             <div className="relative">
+               <button
+                 onClick={() => toggleDropdown("about")}
+                 className="hover:underline flex items-center gap-1"
                >
-                 <path
-                   strokeLinecap="round"
-                   strokeLinejoin="round"
-                   strokeWidth="2"
-                   d="M19 9l-7 7-7-7"
-                 />
-               </svg>
-             </button>
-             {openDropdown === "about" && (
-               <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-lg z-50">
-                 {[
-                   { name: "Vision and Mission", path: "/vission" },
-                   { name: "Theory of Change", path: "/theory" },
-                   { name: "Our story", path: "/story" },
-                   { name: "Core Values", path: "/values" },
-                 { name: "Leadership Team", path: "/leadership" },
-                 ].map((col) => (
-                   <Link
-                     key={col.name}
-                     to={col.path}
-                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                   >
-                     {col.name}
-                   </Link>
-                 ))}
-               </div>
-             )}
-           </div>
-     
-           {/* Services with dropdown */}
-           <div className=" mt-3 relative">
-             <button
-               onClick={() => toggleDropdown("services")}
-               className="hover:underline flex items-center gap-1"
-             >
-               Services
-               <svg
-                 className="w-3 h-3 mt-[2px]"
-                 fill="none"
-                 stroke="currentColor"
-                 viewBox="0 0 24 24"
+                 About Us
+                 <svg
+                   className="w-3 h-3 mt-[2px]"
+                   fill="none"
+                   stroke="currentColor"
+                   viewBox="0 0 24 24"
+                 >
+                   <path
+                     strokeLinecap="round"
+                     strokeLinejoin="round"
+                     strokeWidth="2"
+                     d="M19 9l-7 7-7-7"
+                   />
+                 </svg>
+               </button>
+               {openDropdown === "about" && (
+                 <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-lg z-50">
+                   {[
+                      { name: "Vision and Mission", path: "/vission" },
+                     { name: "Theory of Change", path: "/theory" },
+                     { name: "Our story", path: "/story" },
+                     { name: "Core Values", path: "/values" },
+                                                           { name: "FAQ", path: "/faq" },
+                   { name: "Leadership Team", path: "/leadership" },
+                   ].map((col) => (
+                     <Link
+                       key={col.name}
+                       to={col.path}
+                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                     >
+                       {col.name}
+                     </Link>
+                   ))}
+                 </div>
+               )}
+             </div>
+       
+             {/* Services with dropdown */}
+             <div className="relative">
+               <button
+                 onClick={() => toggleDropdown("services")}
+                 className="hover:underline flex items-center gap-1"
                >
-                 <path
-                   strokeLinecap="round"
-                   strokeLinejoin="round"
-                   strokeWidth="2"
-                   d="M19 9l-7 7-7-7"
-                 />
-               </svg>
-             </button>
-             {openDropdown === "services" && (
-               <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-lg z-50">
-                 {[
+                 Services
+                 <svg
+                   className="w-3 h-3 mt-[2px]"
+                   fill="none"
+                   stroke="currentColor"
+                   viewBox="0 0 24 24"
+                 >
+                   <path
+                     strokeLinecap="round"
+                     strokeLinejoin="round"
+                     strokeWidth="2"
+                     d="M19 9l-7 7-7-7"
+                   />
+                 </svg>
+               </button>
+               {openDropdown === "services" && (
+                 <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-lg z-50">
+                   {[
                    { name: "Farming ", path: "/farming" },
-                   { name: "Aggregation & Market Linkages", path: "/aggregation" },
-                    { name: "Cold Storage & Logistics", path: "/storage" },
-                   { name: "Value Addition ", path: "/value" },
-                   { name: "Training & Capacity Building", path: "/training" },
-  
-                 ].map((srv) => (
-                   <Link
-                     key={srv.name}
-                     to={srv.path}
-                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                   >
-                     {srv.name}
-                   </Link>
-                 ))}
-               </div>
-             )}
-         </div>
-                 </li>
+                     { name: "Aggregation & Market Linkages", path: "/aggregation" },
+                      { name: "Cold Storage & Logistics", path: "/storage" },
+                     { name: "Value Addition ", path: "/value" },
+                     { name: "Training & Capacity Building", path: "/training" },
+                   ].map((srv) => (
+                     <Link
+                       key={srv.name}
+                       to={srv.path}
+                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                     >
+                       {srv.name}
+                     </Link>
+                   ))}
+                 </div>
+               )}
+           </div>
                  <li>
-                   <Link to="/impact" onClick={closeMenu} className="hover:text-[#BDDA02]">
+                   <Link
+                     to="/impact"
+                     className="hover:text-[#BDDA02] transition"
+                   >
                      Impact
                    </Link>
                  </li>
                  <li>
-                   <Link to="/resources" onClick={closeMenu} className="hover:text-[#BDDA02]">
-                    Resources
+                   <Link
+                     to="/resources"
+                     className="hover:text-[#BDDA02] transition"
+                   >
+                     Resources
                    </Link>
                  </li>
                  <li>
-                   <Link to="/contact" onClick={closeMenu} className="hover:text-[#BDDA02]">
+                   <Link
+                     to="/contact"
+                     className="hover:text-[#BDDA02] transition"
+                   >
                      Contact Us
                    </Link>
                  </li>
                </ul>
+       
+               {/* Desktop CTA */}
+                <a
+ href="mailto:info@fruitieveggie.com"  className="px-6 py-2 text-xs md:text-sm shadow-[0_0_10px_#BDDA02] hover:shadow-[0_0_20px_#BDDA02] 
+  rounded-lg font-semibold flex items-center gap-2 bg-[#BDDA02] text-black hidden md:flex"
+>
+  Contact Us
+</a>
+       
+               {/* Mobile Menu Button */}
+               <div className="md:hidden">
+                 <button onClick={toggleMenu}>
+                   {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+                 </button>
+               </div>
              </div>
-           )}
-         </nav>
+       
+             {/* Mobile Menu Dropdown */}
+             {isOpen && (
+               <div className="md:hidden bg-white shadow-lg">
+                 <ul className="flex flex-col gap-4 px-6 py-6 text-gray-700 font-medium">
+                   <li>
+                     <Link to="/" onClick={closeMenu} className="hover:text-[#BDDA02]">
+                       Home
+                     </Link>
+                   </li>
+                   <li>
+                     <div className="relative">
+               <button
+                 onClick={() => toggleDropdown("about")}
+                 className="hover:underline flex items-center gap-1"
+               >
+                 About Us
+                 <svg
+                   className="w-3 h-3 mt-[2px]"
+                   fill="none"
+                   stroke="currentColor"
+                   viewBox="0 0 24 24"
+                 >
+                   <path
+                     strokeLinecap="round"
+                     strokeLinejoin="round"
+                     strokeWidth="2"
+                     d="M19 9l-7 7-7-7"
+                   />
+                 </svg>
+               </button>
+               {openDropdown === "about" && (
+                 <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-lg z-50">
+                   {[
+                     { name: "Vision and Mission", path: "/vission" },
+                     { name: "Theory of Change", path: "/theory" },
+                     { name: "Our story", path: "/story" },
+                     { name: "Core Values", path: "/values" },
+                                        { name: "FAQ", path: "/faq" },
+   { name: "Leadership Team", path: "/leadership" },
+                   ].map((col) => (
+                     <Link
+                       key={col.name}
+                       to={col.path}
+                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                     >
+                       {col.name}
+                     </Link>
+                   ))}
+                 </div>
+               )}
+             </div>
+       
+             {/* Services with dropdown */}
+             <div className=" mt-3 relative">
+               <button
+                 onClick={() => toggleDropdown("services")}
+                 className="hover:underline flex items-center gap-1"
+               >
+                 Services
+                 <svg
+                   className="w-3 h-3 mt-[2px]"
+                   fill="none"
+                   stroke="currentColor"
+                   viewBox="0 0 24 24"
+                 >
+                   <path
+                     strokeLinecap="round"
+                     strokeLinejoin="round"
+                     strokeWidth="2"
+                     d="M19 9l-7 7-7-7"
+                   />
+                 </svg>
+               </button>
+               {openDropdown === "services" && (
+                 <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-lg z-50">
+                   {[
+                     { name: "Farming ", path: "/farming" },
+                     { name: "Aggregation & Market Linkages", path: "/aggregation" },
+                      { name: "Cold Storage & Logistics", path: "/storage" },
+                     { name: "Value Addition ", path: "/value" },
+                     { name: "Training & Capacity Building", path: "/training" },
+    
+                   ].map((srv) => (
+                     <Link
+                       key={srv.name}
+                       to={srv.path}
+                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                     >
+                       {srv.name}
+                     </Link>
+                   ))}
+                 </div>
+               )}
+           </div>
+                   </li>
+                   <li>
+                     <Link to="/impact" onClick={closeMenu} className="hover:text-[#BDDA02]">
+                       Impact
+                     </Link>
+                   </li>
+                   <li>
+                     <Link to="/resources" onClick={closeMenu} className="hover:text-[#BDDA02]">
+                    Resources
+                     </Link>
+                   </li>
+                   <li>
+                     <Link to="/contact" onClick={closeMenu} className="hover:text-[#BDDA02]">
+                       Contact Us
+                     </Link>
+                   </li>
+                 </ul>
+               </div>
+             )}
+           </nav>
  
       {/* Hero */}
       <section
@@ -468,8 +372,8 @@ const media = [
  <h1 className="text-2xl md:text-4xl font-bold">
   Agriculture is more than planting and harvesting
 </h1>
-<p className="mt-4 text-xs md:text-lg">
-  At Fruiteveggie Limited, we believe agriculture is the backbone of
+<p className="mt-4 text-xs md:text-xl">
+  At Fruitieveggie Limited, we believe agriculture is the backbone of
   sustainable communities. It goes beyond planting and harvesting —
   it is about nourishing people, empowering farmers, and building
   resilient food systems. By integrating innovation with traditional
@@ -497,46 +401,19 @@ const media = [
         key={i}
         src={item}
         controls
-        className="w-full h-40 object-cover rounded-lg shadow-md"
+        className="w-full h-full object-cover rounded-lg shadow-md"
       />
     ) : (
       <img
         key={i}
         src={item}
         alt={`Farm ${i + 1}`}
-        className="w-full h-40 object-cover rounded-lg shadow-md"
+        className="w-full h-full object-cover rounded-lg shadow-md"
       />
     );
   })}
 </div></div>
- <div className="max-w-3xl mx-auto py-12 px-4">
-      <h2 className="text-center text-2xl md:text-3xl font-bold mb-8">
-        Frequently Asked Questions (FAQs)
-      </h2>
 
-      <div className="space-y-4">
-        {faqs.map((faq, index) => (
-          <div key={index} className="border-b pb-2">
-            <button
-              onClick={() => toggleFAQ(index)}
-              className="w-full flex justify-between items-center text-left font-medium text-gray-800 hover:text-green-600 focus:outline-none"
-            >
-              {faq.question}
-              <span className="ml-2 text-xl">
-                {openIndex === index ? "−" : "+"}
-              </span>
-            </button>
-            <div
-              className={`mt-2 text-gray-600 transition-all duration-300 overflow-hidden ${
-                openIndex === index ? "max-h-40" : "max-h-0"
-              }`}
-            >
-              <p className="text-sm leading-relaxed">{faq.answer}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
           <div id="blog" className="py-6 px-2  max-w-5xl mx-auto bg-white">
              <h2 className="text-center text-2xl md:text-3xl  font-bold mb-8">
         News & Blog

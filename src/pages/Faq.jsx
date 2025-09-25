@@ -1,12 +1,120 @@
 // src/App.jsx
-import {  FaTwitter, FaInstagram,  FaArrowUp, FaLinkedinIn, FaFacebookF, FaPaperPlane, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaChevronDown, FaChevronRight, FaArrowRight } from "react-icons/fa";
+import {  FaTwitter, FaInstagram,  FaArrowUp, FaLinkedinIn, FaFacebookF, FaPaperPlane, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaChevronDown, FaChevronRight, FaArrowRight, FaLeaf, FaHandshake, FaLightbulb, FaUsers, FaBolt, FaAward } from "react-icons/fa";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-const Agregation= () => {
+const Faq= () => {
   
+  const faqs = [
+   {
+     question: "What is Fruitieveggie Farmacy Limited all about?",
+     answer:
+       "Fruitieveggie is an agricultural enterprise focused on reducing post-harvest losses, empowering farmers, and ensuring food security. We provide innovative post-harvest solutions, including cold storage, logistics, and market access for fresh produce.",
+   },
+   {
+     question: "Who do you work with?",
+     answer:
+       "We work with farmers, distributors, retailers, and consumers interested in fresh produce.",
+   },
+   {
+     question: "What makes Fruitieveggie different?",
+     answer:
+       "Our unique focus on sustainability, innovation, and farmer empowerment sets us apart. We reduce waste, improve logistics, and connect farmers directly with markets.",
+   },
+   {
+     question: "How can farmers benefit from Fruitieveggie?",
+     answer:
+       "Farmers benefit from access to cold storage, logistics, training, and improved market opportunities that increase profits and reduce losses.",
+   },
+   {
+     question: "Do you only serve farmers?",
+     answer:
+       "No. While farmers are a core part of our mission, we also serve distributors, retailers, and households that want fresh produce.",
+   },
+   {
+     question: "How does Fruitieveggie promote sustainability?",
+     answer:
+       "We help reduce food waste, encourage eco-friendly farming practices, and provide efficient storage and transport solutions to preserve freshness.",
+   },
+   {
+     question: "Can I partner with Fruitieveggie?",
+     answer:
+       "Yes. We welcome partnerships with individuals, organizations, and businesses aligned with our mission.",
+   },
+   {
+     question: "Do you provide training for farmers?",
+     answer:
+       "Yes. We train farmers in best agricultural practices, storage methods, and ways to access wider markets.",
+   },
+   {
+     question: "What products do you handle?",
+     answer:
+       "We handle fresh fruits, vegetables, and other perishable produce.",
+   },
+   {
+     question: "Can I visit your farm or facilities?",
+     answer:
+       "Yes, visits can be arranged. Please contact our support team to schedule one.",
+   },
+   {
+     question: "How do I place an order for fresh produce?",
+     answer:
+       "Orders can be placed through our website, mobile app, or customer service channels.",
+   },
+   {
+     question: "Do you deliver nationwide?",
+     answer:
+       "Yes. We deliver to several states nationwide through our logistics partners.",
+   },
+   {
+     question: "What is the minimum order size?",
+     answer:
+       "Minimum order size may vary depending on the type of produce. Contact us for details.",
+   },
+   {
+     question: "How do you ensure freshness during delivery?",
+     answer:
+       "We use cold chain logistics and proper packaging to ensure all produce arrives fresh.",
+   },
+   {
+     question: "How should I store the produce after purchase?",
+     answer:
+       "We provide storage tips for different produce to help customers preserve freshness after delivery.",
+   },
+   {
+     question: "Do you offer subscriptions or regular delivery services?",
+     answer:
+       "Yes. Customers can subscribe for weekly or monthly fresh produce delivery services.",
+   },
+   {
+     question: "What happens if my order arrives damaged or incomplete?",
+     answer:
+       "Please contact our support team immediately. We will arrange a replacement or refund.",
+   },
+   {
+     question: "Do you also sell processed products?",
+     answer:
+       "Our main focus is fresh produce, but we plan to introduce processed products in the future.",
+   },
+   {
+     question: "What payment options are available?",
+     answer:
+       "We accept debit/credit cards, bank transfers, and mobile payment options.",
+   },
+   {
+     question: "How can I contact Fruitieveggie?",
+     answer:
+       "You can reach us through email, phone, or the contact form on our website.",
+   },
+ ];
  
+   const [openIndex, setOpenIndex] = useState(null);
+ 
+   const toggleFAQ = (index) => {
+     setOpenIndex(openIndex === index ? null : index);
+   };
+  
   
    const scrollToTop = () => {
     window.scrollTo({
@@ -22,20 +130,9 @@ const [openDropdown, setOpenDropdown] = useState(null);
   };
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
-const media = [ 
-  "/agr1.jpg",
-  "/agr2.jpg",
-  "/agr3.jpg",
-  "/agr4.jpg",
-  "/agr5.jpg",
-  "/agr6.jpg",
-  "/agr.mp4",
-  "/agr2.mp4",
-];
-
 
   return (
-    <div className=" mt-10 min-h-screen w-full text-gray-900">
+    <div className=" mt-10 min-h-screen w-full  text-gray-900">
    
    <nav className="fixed top-0 left-0 w-full bg-white shadow z-50">
               <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -181,6 +278,7 @@ const media = [
 >
   Contact Us
 </a>
+        
                 {/* Mobile Menu Button */}
                 <div className="md:hidden">
                   <button onClick={toggleMenu}>
@@ -303,73 +401,70 @@ const media = [
                 </div>
               )}
             </nav>
-       {/* HERO */}
-           <section className="relative w-full h-auto md:mt-20  mt-10 min-h-[60vh] md:min-h-[80vh]">
-             <img
-               src="/blog1.png"
-               alt="Hero"
-               className="absolute inset-0 w-full h-full object-cover rounded-b-2xl"
-             />
-             <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-start p-10 rounded-md">
-               <h1 className="text-white mb-4 mt-20 text-xl md:text-6xl font-bold w-full md:max-w-5xl">
-                 Building a Sustainable Future, From Farm to Market.
-               </h1>
-                <a
-       href="mailto:smith@fruitnveggis.com"> <button className="md:px-6 px-3  py-3 text-xs md:text-sm  rounded-lg font-semibold flex items-center justify-center gap-2 
+      {/* HERO */}
+     <section
+  id="home"
+  className="relative md:min-h-[80vh] min-h-[50vh] mt-20 flex items-center w-full  text-left text-white"
+>
+  {/* Background image */}
+  <img
+    src="/faq.png"
+    alt="Agriculture"
+    className="absolute inset-0 w-full h-full object-cover "
+  />
+               <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-start p-4 md:p-12">
+                 <h1 className="text-white text-2xl mt-20 mb-3 md:text-5xl font-bold w-full md:max-w-3xl">
+                   Revolutionizing agriculture
+                 </h1>
+                 <p className="text-white md:text-xl text-xs w-full md:max-w-3xl">
+                   At Fruitieveggie, we revolutionize agriculture with sustainable
+                   practices and innovative solutions. By empowering farmers,
+                   particularly women and youth, we promote food security, minimize
+                   waste, and foster community growth.
+                 </p>
+            <Link to="/contact" >   <button className="md:px-6 px-3 mt-3  py-3 text-xs md:text-sm  rounded-lg font-semibold flex items-center justify-center gap-2 
        bg-[#BDDA02] text-black 
        shadow-[0_4px_15px_rgba(189,218,2,0.6)] 
        hover:shadow-[0_6px_20px_rgba(189,218,2,0.8)] 
        transition duration-300 ease-in-out active:scale-95">
-                 Partner with us <FaArrowRight />
-               </button></a>
-             </div>
+                   Contact Us <FaArrowRight />
+                 </button></Link>
+               </div>
+            
            </section>
-     
-           {/* SERVICES */}
-         
-     
-     
-       
+ {/* ================= FAQ ================= */}
+       <div className="max-w-3xl mx-auto py-12 px-4">
+      <h2 className="text-center text-2xl md:text-3xl font-bold mb-8">
+        Frequently Asked Questions (FAQs)
+      </h2>
 
-
-
-
-    <section className="max-w-6xl mx-auto px-4 py-12 gap-10 items-center">
-      {/* Text Section */}
-      <div className="space-y-6">
-        <h2 className="text-2xl md:text-4xl font-bold text-[#264733]">
-Aggregation & Market Linkages
-        </h2>
-        <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-         We connect farmers to fair and profitable markets, ensuring they get the value their hard work deserves.
-
-        </p>
+      <div className="space-y-4">
+        {faqs.map((faq, index) => (
+          <div key={index} className="border-b pb-2">
+            <button
+              onClick={() => toggleFAQ(index)}
+              className="w-full flex justify-between items-center text-left font-medium text-gray-800 hover:text-green-600 focus:outline-none"
+            >
+              {faq.question}
+              <span className="ml-2 text-xl">
+                {openIndex === index ? "−" : "+"}
+              </span>
+            </button>
+            <div
+              className={`mt-2 text-gray-600 transition-all duration-300 overflow-hidden ${
+                openIndex === index ? "max-h-40" : "max-h-0"
+              }`}
+            >
+              <p className="text-sm leading-relaxed">{faq.answer}</p>
+            </div>
+          </div>
+        ))}
       </div>
+    </div>
+ 
 
-     <div className="grid grid-cols-2 md:grid-cols-3 mt-5 lg:grid-cols-4 gap-4">
-  {media.map((item, i) => {
-    const isVideo = item.endsWith(".mp4");
-    return isVideo ? (
-      <video
-        key={i}
-        src={item}
-        controls
-        className="w-full h-full object-cover rounded-lg shadow-md"
-      />
-    ) : (
-      <img
-        key={i}
-        src={item}
-        alt={`Farm ${i + 1}`}
-        className="w-full h-full object-cover rounded-lg shadow-md"
-      />
-    );
-  })}
-</div>
-    </section>
-    
       {/* FOOTER */}
-     <footer className="bg-green-950 text-white   mt-2 relative z-10">
+    <footer className="bg-green-950 text-white   mt-2 relative z-10">
             <div className="max-w-5xl mx-auto py-16 px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
              {/* Logo & Contact */}
              <div>
@@ -533,4 +628,4 @@ Alado Village, Awowo, Ewekoro, Ogun State, Nigeria
   );
 };
 
-export default Agregation;
+export default Faq;

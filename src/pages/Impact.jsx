@@ -86,274 +86,275 @@ const [openDropdown, setOpenDropdown] = useState(null);
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <div className="font-sans mt-10 text-gray-900">
+    <div className=" mt-10 min-h-screen w-full  text-gray-900">
    
-    <nav className="fixed top-0 left-0 w-full bg-white shadow z-50">
-            <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-              {/* Logo */}
-             <div className="flex items-center gap-2">
-        <img
-          src="/logor.png"
-          alt="Fruit&Veggie Logo"
-          className="h-12 w-auto"
-        />
-        <div className="flex flex-col leading-tight">
-          <h2 className="font-semibold text-lg">Fruitieveggie</h2>
-          <p className="text-sm text-gray-500">urban farm</p>
-        </div>
-      </div>
-      
-      
-              {/* Desktop Menu */}
-              <ul className="hidden md:flex gap-6 text-gray-700 font-medium">
-                <li>
-                  <Link
-                    to="/"
-                    className="hover:text-[#BDDA02] transition"
-                  >
-                    Home
-                  </Link>
-                </li>
-            
-            
-            <div className="relative">
-              <button
-                onClick={() => toggleDropdown("about")}
-                className="hover:underline flex items-center gap-1"
-              >
-                About Us
-                <svg
-                  className="w-3 h-3 mt-[2px]"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-              {openDropdown === "about" && (
-                <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-lg z-50">
-                  {[
-                     { name: "Vision and Mission", path: "/vission" },
-                    { name: "Theory of Change", path: "/theory" },
-                    { name: "Our story", path: "/story" },
-                    { name: "Core Values", path: "/values" },
-                  { name: "Leadership Team", path: "/leadership" },
-                  ].map((col) => (
-                    <Link
-                      key={col.name}
-                      to={col.path}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                    >
-                      {col.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-      
-            {/* Services with dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => toggleDropdown("services")}
-                className="hover:underline flex items-center gap-1"
-              >
-                Services
-                <svg
-                  className="w-3 h-3 mt-[2px]"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-              {openDropdown === "services" && (
-                <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-lg z-50">
-                  {[
-                  { name: "Farming ", path: "/farming" },
-                    { name: "Aggregation & Market Linkages", path: "/aggregation" },
-                     { name: "Cold Storage & Logistics", path: "/storage" },
-                    { name: "Value Addition ", path: "/value" },
-                    { name: "Training & Capacity Building", path: "/training" },
-                  ].map((srv) => (
-                    <Link
-                      key={srv.name}
-                      to={srv.path}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                    >
-                      {srv.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
+   <nav className="fixed top-0 left-0 w-full bg-white shadow z-50">
+              <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+                {/* Logo */}
+               <div className="flex items-center gap-1">
+          <img
+            src="/logor.png"
+            alt="Fruit&Veggie Logo"
+            className="h-16 w-20"
+          />
+          <div className="flex flex-col leading-tight">
+            <h2 className="font-semibold text-sm md:text-lg">Fruitieveggie</h2>
+          <p className="md:text-sm text-xs text-gray-500">urban farm</p>
           </div>
-                <li>
-                  <Link
-                    to="/impact"
-                    className="hover:text-[#BDDA02] transition"
-                  >
-                    Impact
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/resources"
-                    className="hover:text-[#BDDA02] transition"
-                  >
-                    Resources
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/contact"
-                    className="hover:text-[#BDDA02] transition"
-                  >
-                    Contact Us
-                  </Link>
-                </li>
-              </ul>
-      
-              {/* Desktop CTA */}
-              <Link
-                to="/contact"
-                className="px-6 py-2 text-xs md:text-sm shadow-[0_0_10px_#BDDA02] hover:shadow-[0_0_20px_#BDDA02] 
-                rounded-lg font-semibold flex items-center gap-2 bg-[#BDDA02] text-black hidden md:flex"
-              >
-                Contact Us
-              </Link>
-      
-              {/* Mobile Menu Button */}
-              <div className="md:hidden">
-                <button onClick={toggleMenu}>
-                  {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-                </button>
-              </div>
-            </div>
-      
-            {/* Mobile Menu Dropdown */}
-            {isOpen && (
-              <div className="md:hidden bg-white shadow-lg">
-                <ul className="flex flex-col gap-4 px-6 py-6 text-gray-700 font-medium">
+        </div>
+        
+        
+                {/* Desktop Menu */}
+                <ul className="hidden md:flex gap-6 text-gray-700 font-medium">
                   <li>
-                    <Link to="/" onClick={closeMenu} className="hover:text-[#BDDA02]">
+                    <Link
+                      to="/"
+                      className="hover:text-[#BDDA02] transition"
+                    >
                       Home
                     </Link>
                   </li>
-                  <li>
-                    <div className="relative">
-              <button
-                onClick={() => toggleDropdown("about")}
-                className="hover:underline flex items-center gap-1"
-              >
-                About Us
-                <svg
-                  className="w-3 h-3 mt-[2px]"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+              
+              
+              <div className="relative">
+                <button
+                  onClick={() => toggleDropdown("about")}
+                  className="hover:underline flex items-center gap-1"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-              {openDropdown === "about" && (
-                <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-lg z-50">
-                  {[
-                    { name: "Vision and Mission", path: "/vission" },
-                    { name: "Theory of Change", path: "/theory" },
-                    { name: "Our story", path: "/story" },
-                    { name: "Core Values", path: "/values" },
-                  { name: "Leadership Team", path: "/leadership" },
-                  ].map((col) => (
-                    <Link
-                      key={col.name}
-                      to={col.path}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                    >
-                      {col.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-      
-            {/* Services with dropdown */}
-            <div className=" mt-3 relative">
-              <button
-                onClick={() => toggleDropdown("services")}
-                className="hover:underline flex items-center gap-1"
-              >
-                Services
-                <svg
-                  className="w-3 h-3 mt-[2px]"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+                  About Us
+                  <svg
+                    className="w-3 h-3 mt-[2px]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                {openDropdown === "about" && (
+                  <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-lg z-50">
+                    {[
+                       { name: "Vision and Mission", path: "/vission" },
+                      { name: "Theory of Change", path: "/theory" },
+                      { name: "Our story", path: "/story" },
+                      { name: "Core Values", path: "/values" },
+                                                            { name: "FAQ", path: "/faq" },
+                    { name: "Leadership Team", path: "/leadership" },
+                    ].map((col) => (
+                      <Link
+                        key={col.name}
+                        to={col.path}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      >
+                        {col.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+        
+              {/* Services with dropdown */}
+              <div className="relative">
+                <button
+                  onClick={() => toggleDropdown("services")}
+                  className="hover:underline flex items-center gap-1"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-              {openDropdown === "services" && (
-                <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-lg z-50">
-                  {[
+                  Services
+                  <svg
+                    className="w-3 h-3 mt-[2px]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                {openDropdown === "services" && (
+                  <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-lg z-50">
+                    {[
                     { name: "Farming ", path: "/farming" },
-                    { name: "Aggregation & Market Linkages", path: "/aggregation" },
-                     { name: "Cold Storage & Logistics", path: "/storage" },
-                    { name: "Value Addition ", path: "/value" },
-                    { name: "Training & Capacity Building", path: "/training" },
-   
-                  ].map((srv) => (
-                    <Link
-                      key={srv.name}
-                      to={srv.path}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                    >
-                      {srv.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-          </div>
-                  </li>
+                      { name: "Aggregation & Market Linkages", path: "/aggregation" },
+                       { name: "Cold Storage & Logistics", path: "/storage" },
+                      { name: "Value Addition ", path: "/value" },
+                      { name: "Training & Capacity Building", path: "/training" },
+                    ].map((srv) => (
+                      <Link
+                        key={srv.name}
+                        to={srv.path}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      >
+                        {srv.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+            </div>
                   <li>
-                    <Link to="/impact" onClick={closeMenu} className="hover:text-[#BDDA02]">
+                    <Link
+                      to="/impact"
+                      className="hover:text-[#BDDA02] transition"
+                    >
                       Impact
                     </Link>
                   </li>
                   <li>
-                    <Link to="/resources" onClick={closeMenu} className="hover:text-[#BDDA02]">
-                     Resources
+                    <Link
+                      to="/resources"
+                      className="hover:text-[#BDDA02] transition"
+                    >
+                      Resources
                     </Link>
                   </li>
                   <li>
-                    <Link to="/contact" onClick={closeMenu} className="hover:text-[#BDDA02]">
+                    <Link
+                      to="/contact"
+                      className="hover:text-[#BDDA02] transition"
+                    >
                       Contact Us
                     </Link>
                   </li>
                 </ul>
+        
+                {/* Desktop CTA */}
+                <a
+ href="mailto:info@fruitieveggie.com"  className="px-6 py-2 text-xs md:text-sm shadow-[0_0_10px_#BDDA02] hover:shadow-[0_0_20px_#BDDA02] 
+  rounded-lg font-semibold flex items-center gap-2 bg-[#BDDA02] text-black hidden md:flex"
+>
+  Contact Us
+</a>
+        
+                {/* Mobile Menu Button */}
+                <div className="md:hidden">
+                  <button onClick={toggleMenu}>
+                    {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+                  </button>
+                </div>
               </div>
-            )}
-          </nav>
+        
+              {/* Mobile Menu Dropdown */}
+              {isOpen && (
+                <div className="md:hidden bg-white shadow-lg">
+                  <ul className="flex flex-col gap-4 px-6 py-6 text-gray-700 font-medium">
+                    <li>
+                      <Link to="/" onClick={closeMenu} className="hover:text-[#BDDA02]">
+                        Home
+                      </Link>
+                    </li>
+                    <li>
+                      <div className="relative">
+                <button
+                  onClick={() => toggleDropdown("about")}
+                  className="hover:underline flex items-center gap-1"
+                >
+                  About Us
+                  <svg
+                    className="w-3 h-3 mt-[2px]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                {openDropdown === "about" && (
+                  <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-lg z-50">
+                    {[
+                      { name: "Vision and Mission", path: "/vission" },
+                      { name: "Theory of Change", path: "/theory" },
+                      { name: "Our story", path: "/story" },
+                      { name: "Core Values", path: "/values" },
+                                         { name: "FAQ", path: "/faq" },
+    { name: "Leadership Team", path: "/leadership" },
+                    ].map((col) => (
+                      <Link
+                        key={col.name}
+                        to={col.path}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      >
+                        {col.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+        
+              {/* Services with dropdown */}
+              <div className=" mt-3 relative">
+                <button
+                  onClick={() => toggleDropdown("services")}
+                  className="hover:underline flex items-center gap-1"
+                >
+                  Services
+                  <svg
+                    className="w-3 h-3 mt-[2px]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                {openDropdown === "services" && (
+                  <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-lg z-50">
+                    {[
+                      { name: "Farming ", path: "/farming" },
+                      { name: "Aggregation & Market Linkages", path: "/aggregation" },
+                       { name: "Cold Storage & Logistics", path: "/storage" },
+                      { name: "Value Addition ", path: "/value" },
+                      { name: "Training & Capacity Building", path: "/training" },
+     
+                    ].map((srv) => (
+                      <Link
+                        key={srv.name}
+                        to={srv.path}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      >
+                        {srv.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+            </div>
+                    </li>
+                    <li>
+                      <Link to="/impact" onClick={closeMenu} className="hover:text-[#BDDA02]">
+                        Impact
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/resources" onClick={closeMenu} className="hover:text-[#BDDA02]">
+                     Resources
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/contact" onClick={closeMenu} className="hover:text-[#BDDA02]">
+                        Contact Us
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              )}
+            </nav>
     {/* Hero Section */}
 <section
   id="home"
@@ -370,12 +371,12 @@ const [openDropdown, setOpenDropdown] = useState(null);
   <div className="absolute inset-0 bg-black/50 " />
 
   {/* Content */}
-  <div className="relative z-10 max-w-2xl px-6 md:px-12">
+  <div className="relative z-10 md:max-w-3xl w-full px-6 md:px-12">
     <h1 className="text-3xl md:text-5xl font-bold leading-tight">
       Transforming Agriculture Across Africa
     </h1>
-    <p className="mt-4 text-base md:text-lg">
-      At Fruitweggie Farmwey, we measure success not just in numbers,
+    <p className="mt-4 text-xs md:text-xl">
+      At Fruitieveggie, we measure success not just in numbers,
       but in lives transformed, food saved, and communities empowered.
     </p>
   </div>
@@ -430,10 +431,10 @@ const [openDropdown, setOpenDropdown] = useState(null);
 
             {/* Text */}
             <div className="flex-1 ">
-              <h3 className="text-lg font-semibold text-blackmb-2">
+              <h3 className="md:text-xl text-sm  font-semibold text-blackmb-2">
                 {sdg.title}
               </h3>
-              <p className="text-gray-700 text-sm leading-relaxed">
+              <p className="text-gray-700 md:text-lg text-xs  leading-relaxed">
                 {sdg.description}
               </p>
             </div>

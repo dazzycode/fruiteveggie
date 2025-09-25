@@ -119,20 +119,20 @@ const sdgs = [
   ];
 
   return (
-    <div className="font-sans px-1">
+    <div className="min-h-screen w-full smooth-scroll px-1">
 
    <nav className="fixed top-0 left-0 w-full bg-white shadow z-50">
            <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
              {/* Logo */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1">
        <img
          src="/logor.png"
          alt="Fruit&Veggie Logo"
-         className="h-12 w-auto"
+         className="h-16 w-20"
        />
        <div className="flex flex-col leading-tight">
-         <h2 className="font-semibold text-lg">Fruitieveggie</h2>
-       <p className="text-sm text-gray-500">urban farm</p>
+         <h2 className="font-semibold text-sm md:text-lg">Fruitieveggie</h2>
+       <p className="md:text-sm text-xs text-gray-500">urban farm</p>
        </div>
      </div>
      
@@ -176,6 +176,7 @@ const sdgs = [
                    { name: "Theory of Change", path: "/theory" },
                    { name: "Our story", path: "/story" },
                    { name: "Core Values", path: "/values" },
+                                                         { name: "FAQ", path: "/faq" },
                  { name: "Leadership Team", path: "/leadership" },
                  ].map((col) => (
                    <Link
@@ -258,14 +259,12 @@ const sdgs = [
              </ul>
      
              {/* Desktop CTA */}
-             <Link
-               to="/contact"
-               className="px-6 py-2 text-xs md:text-sm shadow-[0_0_10px_#BDDA02] hover:shadow-[0_0_20px_#BDDA02] 
-               rounded-lg font-semibold flex items-center gap-2 bg-[#BDDA02] text-black hidden md:flex"
-             >
-               Contact Us
-             </Link>
-     
+              <a
+ href="mailto:info@fruitieveggie.com"  className="px-6 py-2 text-xs md:text-sm shadow-[0_0_10px_#BDDA02] hover:shadow-[0_0_20px_#BDDA02] 
+  rounded-lg font-semibold flex items-center gap-2 bg-[#BDDA02] text-black hidden md:flex"
+>
+  Contact Us
+</a>
              {/* Mobile Menu Button */}
              <div className="md:hidden">
                <button onClick={toggleMenu}>
@@ -311,7 +310,8 @@ const sdgs = [
                    { name: "Theory of Change", path: "/theory" },
                    { name: "Our story", path: "/story" },
                    { name: "Core Values", path: "/values" },
-                 { name: "Leadership Team", path: "/leadership" },
+                                      { name: "FAQ", path: "/faq" },
+ { name: "Leadership Team", path: "/leadership" },
                  ].map((col) => (
                    <Link
                      key={col.name}
@@ -391,10 +391,10 @@ const sdgs = [
   
 
       {/* Hero */}
-    <section className="relative w-full  md:py-0 mt-10 font-roboto">
+    <div className="relative w-full  md:py-0 mt-10 ">
       <Swiper
         modules={[Autoplay]}
-        autoplay={{ delay: 4000, disableOnInteraction: false }}
+        autoplay={{ delay: 8000, disableOnInteraction: false }}
         loop={true}
         className="w-full h-full"
       >
@@ -412,10 +412,10 @@ const sdgs = [
 
             {/* Content */}
             <div className="relative z-10 flex flex-col justify-start md:mx-10 mx-3 px-6 md:px-20 w-full md:max-w-4xl mt-20 md:mt-40 pb-16">
-              <h1 className="text-2xl md:text-5xl font-bold text-white leading-tight">
+              <h1 className="text-xl md:text-5xl font-bold text-white leading-tight">
                 {slide.title}
               </h1>
-              <p className="text-white mt-4 text-xs md:text-lg max-w-2xl">
+              <p className="text-white mt-4 text-xs md:text-xl w-full  md:max-w-3xl">
                 {slide.text}
               </p>
 
@@ -464,7 +464,7 @@ const sdgs = [
           }
         }
       `}</style>
-    </section>
+    </div>
   
 
 
@@ -475,117 +475,84 @@ const sdgs = [
           Transforming Agriculture Across Africa
         </h3>
 
-    <div className="mt-5 max-w-4xl mx-auto px-6">
-      <Swiper
-        spaceBetween={30}
-        slidesPerView={1}
-        loop={true}
-        autoplay={{
-          delay: 4000, // 3 seconds per slide
-          disableOnInteraction: false,
-        }}
-        pagination={{ clickable: true }}
-        modules={[Pagination, Autoplay]}
-        className="pb-10"
-      >
-        {/* Vision Slide */}
-      
-<SwiperSlide>
-  <div className="flex flex-col py-5 items-left ">
-    <img
-      src="/vission1.png"
-      alt="Vision"
-      className="rounded-lg mb-4 w-full h-full object-cover"
-    />
-     <h4 className="font-bold text-left text-sm text-red-700 tracking-widest">The Vision</h4>
-    <p className="text-black md:text-lg text-left text-xs mb-6 mt-2">
-     To lead Africa in sustainable, high-quality food production, distribution, and post-harvest solutions.
+   <div className="mt-5 max-w-4xl mx-auto px-6">
+  {/* Swiper - Only Images */}
+  <Swiper
+    spaceBetween={30}
+    slidesPerView={1}
+    loop={true}
+    autoplay={{
+      delay: 4000,
+      disableOnInteraction: false,
+    }}
+    pagination={{ clickable: true }}
+    modules={[Pagination, Autoplay]}
+    className="pb-2"
+  >
+    <SwiperSlide>
+      <img
+        src="/vission1.png"
+        alt="Vision"
+        className="rounded-lg w-full h-full object-cover"
+      />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img
+        src="/vission2.png"
+        alt="Vision"
+        className="rounded-lg w-full h-full object-cover"
+      />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img
+        src="/vission3.png"
+        alt="Vision"
+        className="rounded-lg w-full h-full object-cover"
+      />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img
+        src="/farming6.jpg"
+        alt="Vision"
+        className="rounded-lg w-full h-full object-cover"
+      />
+    </SwiperSlide>
+  </Swiper>
 
+  {/* Static Text Below */}
+  <div className="flex flex-col py-3 items-left">
+    <h4 className="font-bold text-left text-sm text-red-700 tracking-widest">
+      The Vision
+    </h4>
+    <p className="text-black md:text-lg text-xs mb-6 mt-2 text-left">
+      To lead Africa in sustainable, high-quality food production,
+      distribution, and post-harvest solutions.
     </p>
-    <h4 className="font-bold text-left text-sm text-red-700 tracking-widest">The Mission</h4>
-    <p className="text-black md:text-lg text-xs text-left mb-8 mt-2">
-      We empower farmers, strengthen food systems, and reduce post-harvest losses through innovation, collaboration, and climate-smart solutions.
+
+    <h4 className="font-bold text-left text-sm text-red-700 tracking-widest">
+      The Mission
+    </h4>
+    <p className="text-black md:text-lg text-xs mb-8 mt-2 text-left">
+      We empower farmers, strengthen food systems, and reduce post-harvest
+      losses through innovation, collaboration, and climate-smart solutions.
     </p>
   </div>
-</SwiperSlide>
 
-{/* Vision & Mission Slide 2 */}
-<SwiperSlide>
-  <div className="flex flex-col py-5 items-left ">
-    <img
-      src="/vission2.png"
-      alt="Vision"
-      className="rounded-lg mb-4 w-full h-full object-cover"
-    />
-    <h4 className="font-bold text-left text-sm text-red-700 tracking-widest">The Vision</h4>
-    <p className="text-black md:text-lg text-left text-xs mb-6 mt-2">
-     To lead Africa in sustainable, high-quality food production, distribution, and post-harvest solutions.
+  {/* Custom pagination styling */}
+  <style jsx global>{`
+    .swiper-pagination-bullet {
+      background: #d9d9d9 !important; /* inactive bullet */
+      opacity: 1 !important;
+    }
+    .swiper-pagination-bullet-active {
+      background: #bdda02 !important; /* lime green active bullet */
+    }
+  `}</style>
+</div>
 
-    </p>
-    <h4 className="font-bold text-left text-sm text-red-700 tracking-widest">The Mission</h4>
-    <p className="text-black md:text-lg text-xs text-left mb-8 mt-2">
-      We empower farmers, strengthen food systems, and reduce post-harvest losses through innovation, collaboration, and climate-smart solutions.
-    </p>
-  </div>
-</SwiperSlide>
-
-{/* Vision & Mission Slide 3 */}
-<SwiperSlide>
-  <div className="flex flex-col py-5 items-left ">
-    <img
-      src="/vission3.png"
-      alt="Vision"
-      className="rounded-lg mb-4 w-full h-full object-cover"
-    />
-   <h4 className="font-bold text-left text-sm text-red-700 tracking-widest">The Vision</h4>
-    <p className="text-black md:text-lg text-left text-xs mb-6 mt-2">
-     To lead Africa in sustainable, high-quality food production, distribution, and post-harvest solutions.
-
-    </p>
-    <h4 className="font-bold text-left text-sm text-red-700 tracking-widest">The Mission</h4>
-    <p className="text-black md:text-lg text-xs text-left mb-8 mt-2">
-      We empower farmers, strengthen food systems, and reduce post-harvest losses through innovation, collaboration, and climate-smart solutions.
-    </p>
-  </div>
-</SwiperSlide>
-
-        {/* Vision & Mission Slide 4 */}
-<SwiperSlide>
-  <div className="flex flex-col py-5 items-left ">
-    <img
-      src="/farming10.jpg"
-      alt="Vision"
-      className="rounded-lg mb-4 w-full h-full object-cover"
-    />
-    <h4 className="font-bold text-left text-sm text-red-700 tracking-widest">The Vision</h4>
-    <p className="text-black md:text-lg text-left text-xs mb-6 mt-2">
-      To inspire a generation of farmers and agri-entrepreneurs who will drive
-      sustainable growth and nourish communities.
-    </p>
-    <h4 className="font-bold text-left text-sm text-red-700 tracking-widest">The Mission</h4>
-    <p className="text-black md:text-lg text-xs text-left mb-8 mt-2">
-      We innovate at every stage — from production to storage to distribution —
-      to reduce losses, protect the environment, and uplift livelihoods.
-    </p>
-  </div>
-</SwiperSlide>
-      </Swiper>
-
-      {/* Custom pagination styling */}
-      <style jsx global>{`
-        .swiper-pagination-bullet {
-          background: #d9d9d9 !important; /* inactive bullet */
-          opacity: 1 !important;
-        }
-        .swiper-pagination-bullet-active {
-          background: #BDDA02 !important; /* lime green active bullet */
-        }
-      `}</style>
-    </div>
-  
  
 
-        <Link to="/about">   <button className="mt-8 px-6 py-3 rounded-lg font-semibold flex items-center gap-2  border border-[#BDDA02] text-[#BDDA02] 
+        <Link to="/about">   <button className="mt-5 px-6 py-3 rounded-lg font-semibold flex items-center gap-2  border border-[#BDDA02] text-[#BDDA02] 
   shadow-[0_0_10px_#BDDA02] hover:shadow-[0_0_20px_#BDDA02] 
   transition duration-300 ease-in-out active:scale-95 mx-auto">
           Learn More <FaArrowRight />
@@ -687,7 +654,7 @@ const sdgs = [
         <h2 className="text-sm md:text-xl text-red-700 font-bold mx-5 text-left mb-2 tracking-widest">
           PROJECTS
         </h2>
-       <h2 className="text-xl md:text-3xl font-bold mx-5 text-left mb-8">
+       <h2 className="text-xl md:text-2xl font-bold mx-5 text-left mb-8">
   Driving agricultural transformation through innovation,<br />
   sustainability, and farmer empowerment to building a<br />
   future where food security and prosperity thrive.
@@ -728,7 +695,7 @@ const sdgs = [
 <div
   className="py-6 px-4  text-center font-semibold "
 >
-  <h2 className="text-base md:text-3xl font-bold mx-auto leading-snug max-w-2xl mb-4">
+  <h2 className="text-base md:text-2xl font-bold mx-auto leading-snug max-w-2xl mb-4">
     At Fruitieveggie, success is measured not only in numbers, but in{" "}
     <span className="text-[#BDDA02]">lives transformed</span>,{" "}
     <span className="text-[#BDDA02]">food saved</span>, and{" "}
@@ -802,7 +769,7 @@ const sdgs = [
       {/* patners */}
       <div className="py-8 px-6 text-center bg-gray-50">
         <h2 className="md:text-xl text-sm text-red-700 font-bold mb-6">
-         Our  partners 
+         Our  Partners 
         </h2>
         <div className="flex justify-center flex-wrap gap-8">
           <img src="/logo1.png" alt="SDG 1" className="md:h-18 h-12" />
@@ -815,7 +782,7 @@ const sdgs = [
      {/* Recommendations */}
       <div className="py-6 px-6 text-center bg-gray-50">
         <h2 className="md:text-xl text-sm text-red-700 font-bold mb-6">
-        recognized and supported by
+        Recognized and Supported By
         </h2>
       <div className="flex justify-center">
   <img src="/logo5.png" alt="Our Partners" className="md:h-16 h-10" />
@@ -861,7 +828,7 @@ const sdgs = [
                 className="w-full h-44 object-cover"
               />
               <div className="p-4">
-                <h4 className="font-semibold mb-2">Insights on post-harvest loss reduction.</h4>
+                <h4 className="text-xs md:text-lg  text-black mb-2">Insights on post-harvest loss reduction.</h4>
                
               </div>
             </div>
@@ -874,7 +841,7 @@ const sdgs = [
                 className="w-full h-44 object-cover"
               />
               <div className="p-4">
-                <h4 className="font-semibold mb-2">Farmer Training Highlights.</h4>
+                <h4 className="text-xs md:text-lg  text-black mb-2">Farmer Training Highlights.</h4>
                 
               </div>
             </div>
@@ -887,14 +854,14 @@ const sdgs = [
                 className="w-full h-44 object-cover"
               />
               <div className="p-4">
-                <h4 className="font-semibold mb-2">Partnership Announcements.</h4>
+                <h4 className="text-xs md:text-lg  text-black mb-2">Partnership Announcements.</h4>
                
               </div>
             </div>
           </div>
 
           <div className="text-center">
-            <Link to="/blog">   <button className="mt-8 px-6 py-3 rounded-lg font-semibold flex items-center gap-2  border border-[#BDDA02] text-[#BDDA02] 
+            <Link to="/resources">   <button className="mt-8 px-6 py-3 rounded-lg font-semibold flex items-center gap-2  border border-[#BDDA02] text-[#BDDA02] 
   shadow-[0_0_10px_#BDDA02] hover:shadow-[0_0_20px_#BDDA02] 
   transition duration-300 ease-in-out active:scale-95 mx-auto">
               Explore more →
@@ -910,7 +877,7 @@ const sdgs = [
           <h2 className="text-2xl md:text-5xl font-bold leading-snug">
             Join us in building a future
           </h2>
-          <p className="mt-4 text-base md:text-2xl">
+          <p className="mt-4 text-sm md:text-xl">
             Where farming thrives, communities prosper, and no harvest goes to
             waste. Partner with us today.
           </p>
