@@ -329,7 +329,7 @@ Theory  of Change                 </h1>
     
     <div className="w-full md:h-auto h-[40vh] md:mx-0 mx-1 mt-5">
   <img
-    src="/section.png" 
+    src="/big.png" 
     alt="Theory of Change"
     className="w-full h-full object-cover rounded-lg"
   />
