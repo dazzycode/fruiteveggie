@@ -414,69 +414,68 @@ Darlington remains dedicated to shaping a future where farming not only sustains
           The minds behind Fruitieveggie
         </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
-          {team.map((person, idx) => {
-            const isExpanded = expandedIndex === idx;
-            return (
-              <div
-                key={idx}
-                className="flex border-1  shadow-[0_0_10px_#BDDA02] 
-                           hover:shadow-[0_0_20px_#BDDA02] bg-white rounded-xl p-6 
-                           transition hover:shadow-xl text-left"
-              >
-                {/* Image */}
-                <div className="flex-shrink-0">
-                  <img
-                    src={person.img}
-                    alt={person.name}
-                    className="w-32 h-32 object-cover rounded-lg  mr-6"
-                  />
-                </div>
+       <div className="grid grid-cols-1 gap-8">
+  {team.map((person, idx) => {
+    const isExpanded = expandedIndex === idx;
+    return (
+      <div
+        key={idx}
+        className="flex flex-col md:flex-row border-1 shadow-[0_0_10px_#BDDA02] 
+                   hover:shadow-[0_0_20px_#BDDA02] bg-white rounded-xl p-6 
+                   transition hover:shadow-xl text-left"
+      >
+        {/* Image */}
+        <div className="flex-shrink-0 flex justify-center md:justify-start mb-4 md:mb-0 md:mr-6">
+          <img
+            src={person.img}
+            alt={person.name}
+            className="w-32 h-32 object-cover rounded-lg"
+          />
+        </div>
 
-             {/* Text */}
-<div className="flex flex-col">
-  <h3 className="font-bold text-lg">{person.name}</h3>
-  <p className="md:text-sm text-xs font-semibold text-red-600 mb-2">
-    {person.role}
-  </p>
+        {/* Text */}
+        <div className="flex flex-col">
+          <h3 className="font-bold text-lg">{person.name}</h3>
+          <p className="md:text-sm text-xs font-semibold text-red-600 mb-2">
+            {person.role}
+          </p>
 
-  {/* Bio paragraphs */}
-  <div
-    className={`md:text-sm text-xs text-gray-700 text-justify leading-relaxed space-y-3 ${
-      isExpanded ? "" : "line-clamp-3"
-    }`}
-  >
-    {person.bio.split("\n\n").map((para, i) => (
-      <p key={i}>{para}</p>
-    ))}
+          {/* Bio paragraphs */}
+          <div
+            className={`md:text-sm text-xs text-gray-700 text-justify leading-relaxed space-y-3 ${
+              isExpanded ? "" : "line-clamp-3"
+            }`}
+          >
+            {person.bio.split("\n\n").map((para, i) => (
+              <p key={i}>{para}</p>
+            ))}
 
-    {/* Core Skills */}
-    {person.coreSkills && (
-      <div className="mt-3 text-left">
-        <h4 className="font-semibold">Core Skills:</h4>
-        <ul className="list-disc list-inside space-y-2">
-          {person.coreSkills.map((skill, i) => (
-            <li key={i}>{skill}</li>
-          ))}
-        </ul>
+            {/* Core Skills */}
+            {person.coreSkills && (
+              <div className="mt-3 text-left">
+                <h4 className="font-semibold">Core Skills:</h4>
+                <ul className="list-disc list-inside space-y-2">
+                  {person.coreSkills.map((skill, i) => (
+                    <li key={i}>{skill}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+
+          {/* Read More / Show Less */}
+          <button
+            onClick={() => toggleExpand(idx)}
+            className="mt-2 md:text-sm text-xs text-black hover:underline self-start"
+          >
+            {isExpanded ? "Show Less <<" : "Read More >>"}
+          </button>
+        </div>
       </div>
-    )}
-  </div>
-
-  {/* Read More / Show Less */}
-  <button
-    onClick={() => toggleExpand(idx)}
-    className="mt-2 md:text-sm text-xs text-black hover:underline self-start"
-  >
-    {isExpanded ? "Show Less <<" : "Read More >>"}
-  </button>
+    );
+  })}
 </div>
 
-
-              </div>
-            );
-          })}
-        </div>
       </div>
     </div>
  

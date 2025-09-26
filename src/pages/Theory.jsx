@@ -327,7 +327,7 @@ Theory  of Change                 </h1>
 
       {/* THEORY OF CHANGE (full-width bg image, centered container) */}
     
-    <div className="w-full mt-5">
+    <div className="w-full md:h-auto h-[40vh] md:mx-0 mx-1 mt-5">
   <img
     src="/section.png" 
     alt="Theory of Change"

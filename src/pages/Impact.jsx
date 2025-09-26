@@ -41,7 +41,7 @@ const Impact= () => {
   const sdgs = [
   {
     id: 1,
-    img: "/sdg1.png",
+    img: "/Sdg1.png",
     title: "SDG 1: No Poverty",
     description: "We empower smallholder farmers with fair market access, training, and post-harvest solutions that increase their incomes and break the cycle of poverty in rural communities."
   },
