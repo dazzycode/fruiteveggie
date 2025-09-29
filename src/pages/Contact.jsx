@@ -338,7 +338,6 @@ ${formData.message}
       </div>
 
     
-  c
 
     <section
       id="contact"

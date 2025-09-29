@@ -340,7 +340,7 @@ const [openDropdown, setOpenDropdown] = useState(null);
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
          <div className="p-6">
               <h3 className="font-semibold text-xl">The Vision</h3>
-              <p className="text-gray-900 md:text-lg text-xs mt-2">
+              <p className="text-gray-700 md:text-lg text-xs mt-2">
                 To lead Africa in sustainable, high-quality food production, distribution, and post-harvest solutions.
 
               </p>
@@ -350,7 +350,7 @@ const [openDropdown, setOpenDropdown] = useState(null);
         
             <div className="p-6">
               <h3 className="font-semibold text-xl">Our Mission</h3>
-              <p className="text-gray-900 text-xs md:text-lg mt-2">
+              <p className="text-gray-700 text-xs md:text-lg mt-2">
               We empower farmers, strengthen food systems, and reduce post-harvest losses through innovation, collaboration, and climate-smart solutions.
               </p>
             </div>

@@ -373,8 +373,8 @@ const media = [
   Agriculture is more than planting and harvesting
 </h1>
 <p className="mt-4 text-xs md:text-xl">
-  At Fruitieveggie Limited, we believe agriculture is the backbone of
-  sustainable communities. It goes beyond planting and harvesting —
+  At Fruitieveggie, we believe agriculture is the backbone of
+  sustainable communities. It goes beyond planting and harvesting,
   it is about nourishing people, empowering farmers, and building
   resilient food systems. By integrating innovation with traditional
   knowledge, we create opportunities for women and youth, reduce
