@@ -552,7 +552,7 @@ const sdgs = [
 
  
 
-        <Link to="/about">   <button className="mt-5 px-6 py-3 rounded-lg font-semibold flex items-center gap-2  border border-[#BDDA02] text-[#BDDA02] 
+        <Link to="/vission">   <button className="mt-5 px-6 py-3 rounded-lg font-semibold flex items-center gap-2  border border-[#BDDA02] text-[#BDDA02] 
   shadow-[0_0_10px_#BDDA02] hover:shadow-[0_0_20px_#BDDA02] 
   transition duration-300 ease-in-out active:scale-95 mx-auto">
           Learn More <FaArrowRight />
@@ -569,7 +569,7 @@ const sdgs = [
             Building a Sustainable Future, <br />
             From Farm to Market.
           </h2>
-         <Link to="/resources">    <button className="flex items-center gap-2 bg-[#BDDA02] text-black font-semibold px-5 py-3 rounded-lg shadow-md shadow-[0_0_30px_#BDDA02] hover:shadow-[0_0_10px_#BDDA02] 
+         <Link to="/farming">    <button className="flex items-center gap-2 bg-[#BDDA02] text-black font-semibold px-5 py-3 rounded-lg shadow-md shadow-[0_0_30px_#BDDA02] hover:shadow-[0_0_10px_#BDDA02] 
   transition duration-300 ease-in-out active:scale-95transition">
             Learn More <FaArrowRight />
           </button></Link>
@@ -805,7 +805,7 @@ const sdgs = [
           <h2 className="text-2xl font-semibold mb-4">
             Do you have any questions?
           </h2>
-         <Link to="/contact">    <button className="bg-[#BDDA02] text-xs  md:text-sm shadow-[0_0_10px_#BDDA02] hover:shadow-[0_0_20px_#BDDA02] 
+         <Link to="/faq">    <button className="bg-[#BDDA02] text-xs  md:text-sm shadow-[0_0_10px_#BDDA02] hover:shadow-[0_0_20px_#BDDA02] 
   transition duration-300 ease-in-out active:scale-95transition text-black font-medium px-6 py-3 rounded-lg">
             See frequently asked questions →
           </button></Link>

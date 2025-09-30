@@ -363,7 +363,7 @@ const media = [
         className="relative md:min-h-[80vh] min-h-[60vh] flex mx-auto mt-20 w-full  text-white"
       >
         <img
-          src="/farm1.jpg"
+          src="/resources.jpg"
           alt="Agriculture"
           className="absolute inset-0 w-full h-full object-cover "
         />
