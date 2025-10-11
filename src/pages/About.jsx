@@ -62,7 +62,7 @@ const About= () => {
                  {/* Logo */}
                 <div className="flex items-center gap-1">
            <img
-             src="/logor.png"
+             src="/logof.png"
              alt="Fruit&Veggie Logo"
              className="h-16 w-20"
            />
@@ -527,7 +527,7 @@ const About= () => {
              <div>
                <div className="flex items-center space-x-2">
                  <img
-                   src="/logor.png"
+                   src="/logof.jpg"
                    alt="Fruitnveggis Logo"
                    className="w-12 h-12 rounded"
                  />
