@@ -440,12 +440,12 @@ Alado Village, Awowo, Ewekoro, Ogun State, Nigeria
              {/* Pages */}
              <div>
                <h4 className="font-semibold text-lg mb-4">Pages</h4>
-               <ul className="space-y-4 text-sm">
-                 <li className="hover:text-white">Contact </li>
+                <ul className="space-y-4 text-sm">
+                                 <li className="hover:text-white">About us</li>
                  <li className="hover:text-white">Services</li>
-                 <li className="hover:text-white">About us</li>
                  <li className="hover:text-white">Impact</li>
-                 <li className="hover:text-white">Contact us</li>
+                   <li className="hover:text-white">Resources </li>
+ <li className="hover:text-white">Contact us</li>
                </ul>
              </div>
      
