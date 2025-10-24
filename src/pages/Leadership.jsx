@@ -94,9 +94,24 @@ Darlington remains dedicated to shaping a future where farming not only sustains
   },
   {
     name: "Joy Jama",
-    role: "(Sales and Business Development)",
+    role: "Procurement and Marketing Officer",
     img: "/joy.png",
     bio: `Joy Jama leads sales and business development at Fruitieveggie, driving partnerships and customer growth. She focuses on expanding market access for smallholder farmers, strengthening client relationships, and positioning Fruitieveggie as a trusted brand for fresh and sustainable produce.`
+  },
+   {
+    name: "Zenas Folorunso ",
+    role: "SALES AND BUSINESS DEVELOPMENT MANAGER",
+    img: "/zenas.jpg",
+    bio: `An agribusiness consultant, educator, and advocate for youth participation in modern agriculture. Passionate about transforming the perception of farming, she helps individuals and agribusinesses unlock opportunities for growth, sustainability, and profitability across the agricultural value chain.
+
+With years of hands-on experience, Zenas has worked on various agricultural enterprises spanning animal production, greenhouse and agribusiness development. 
+
+She provides practical advisory services that bridge the gap between farm productivity and market success guiding farmers, investors, and entrepreneurs to make informed, profitable decisions.
+
+Beyond consultancy, she is dedicated to inspiring the next generation of agripreneurs and regularly facilitates training sessions and workshops where she simplifies complex agricultural systems and ignites participants’ passion for agribusiness.
+
+Known for her blend of technical knowledge, business insight, and creative communication, Zenas also supports agro brands in building visibility, trust, and customer engagement. This approach is rooted in faith, integrity, and impact, aiming to see agriculture not just as a means of livelihood but as a platform for innovation and nation-building.
+ `
   },
 ];
 

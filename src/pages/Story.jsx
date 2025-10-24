@@ -335,11 +335,10 @@ Connecting farmers to fair markets and better futures.
               Our Story
             </h2>
             <h1 className="text-2xl md:text-3xl font-bold mb-4">
-              Connecting farmers to fair markets and better futures.
+Fruitieveggie was founded to solve three pressing challenges not two and they are poor storage, supply chain inefficiency and lack of fair markets.
             </h1>
             <p className="mb-6 md:text-lg text-xs text-gray-600">
-             Born from the real struggles of smallholder farmers, Fruitieveggie was founded to solve two pressing challenges: Inefficient logistics and lack of fair markets. Today, we bridge the gap between farmers and markets with solutions that reduce waste, increase farmer incomes, and ensure food security.
-            </p>
+Born from the real struggles of smallhoder farmers, Fruitieveggie was founded to solve three pressing challenges: Poor storage, supply chain inefficiency and lack of fair markets. Today, we bridge the gap between farmers and markets with solutions that reduce waste, increase farmer incomes, and ensure food insecurity.            </p>
            <a
   href="mailto:smith@fruitnveggis.com">  <button className="px-6 py-3  bg-[#BDDA02] text-black 
   shadow-[0_4px_15px_rgba(189,218,2,0.6)] 
