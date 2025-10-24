@@ -334,7 +334,7 @@ Connecting farmers to fair markets and better futures.
             <h2 className="text-sm uppercase text-red-500 font-bold mb-2">
               Our Story
             </h2>
-            <h1 className="text-2xl md:text-3xl font-bold mb-4">
+            <h1 className="text-xl md:text-2xl font-bold mb-4">
 Fruitieveggie was founded to solve three pressing challenges not two and they are poor storage, supply chain inefficiency and lack of fair markets.
             </h1>
             <p className="mb-6 md:text-lg text-xs text-gray-600">

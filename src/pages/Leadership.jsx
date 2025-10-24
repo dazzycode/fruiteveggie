@@ -92,12 +92,7 @@ Outside the field, he is passionate about music, which he sees as a universal la
 
 Darlington remains dedicated to shaping a future where farming not only sustains communities but also fuels economic growth, environmental stewardship, and empowerment across Nigeria.`
   },
-  {
-    name: "Joy Jama",
-    role: "Procurement and Marketing Officer",
-    img: "/joy.png",
-    bio: `Joy Jama leads sales and business development at Fruitieveggie, driving partnerships and customer growth. She focuses on expanding market access for smallholder farmers, strengthening client relationships, and positioning Fruitieveggie as a trusted brand for fresh and sustainable produce.`
-  },
+  
    {
     name: "Zenas Folorunso ",
     role: "SALES AND BUSINESS DEVELOPMENT MANAGER",
@@ -112,6 +107,12 @@ Beyond consultancy, she is dedicated to inspiring the next generation of agripre
 
 Known for her blend of technical knowledge, business insight, and creative communication, Zenas also supports agro brands in building visibility, trust, and customer engagement. This approach is rooted in faith, integrity, and impact, aiming to see agriculture not just as a means of livelihood but as a platform for innovation and nation-building.
  `
+  },
+  {
+    name: "Joy Jama",
+    role: "Procurement and Marketing Officer",
+    img: "/joy.png",
+    bio: `Joy Jama leads sales and business development at Fruitieveggie, driving partnerships and customer growth. She focuses on expanding market access for smallholder farmers, strengthening client relationships, and positioning Fruitieveggie as a trusted brand for fresh and sustainable produce.`
   },
 ];
 
