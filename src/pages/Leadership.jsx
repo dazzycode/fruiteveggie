@@ -31,7 +31,7 @@ const [openDropdown, setOpenDropdown] = useState(null);
 const team = [
   {
     name: "Abdul-Azeez Alawiye",
-    role: "(Founder & COO)",
+    role: "Founder & COO",
     img: "/alawiye.png",
     bio: `Abdul-Azeez Alawiye is a visionary agribusiness expert, sustainability advocate, and the founder of Fruitieveggie Farmacy Limited, a pioneering enterprise dedicated to transforming Nigeria’s agricultural value chain. His mission is clear: to reduce post-harvest losses, empower farmers, and strengthen food security through innovative, climate-smart, and market-driven solutions.
 
@@ -51,7 +51,7 @@ Looking ahead, Abdul-Azeez envisions a future where Nigeria leads a youth-driven
   },
   {
     name: "Blessing Nwachukwu",
-    role: "(Project Manager)",
+    role: "Project Manager",
     img: "/blessing.png",
     bio: `Blessing Ugochi Nwachukwu is an agricultural engineer committed to advancing post-harvest innovation and strengthening food security. She graduated from the Federal Polytechnic Nekede, Owerri, Imo State, where she specialized in Soil and Water Engineering, gaining a solid foundation in agricultural science and engineering principles. Her academic background inspired a strong passion for tackling post-harvest losses and their impact on food availability and farmer livelihoods.
 
@@ -63,7 +63,7 @@ Outside her professional pursuits, Blessing enjoys singing and traveling, activi
   },
  {
   name: "Sammy Ebiere Ebikebina",
-  role: "(Head of Operations)",
+  role: "Head of Operations",
   img: "/sammy.png",
   bio: `Sammy Ebiere Ebikebina is a seasoned agricultural professional with a strong background in inventory management, farm operations, and farmer capacity building. Over the years, Sammy has honed his expertise in ensuring operational efficiency and promoting sustainable farming practices within agricultural communities.
 
@@ -80,7 +80,7 @@ From March 2021 to July 2022, Sammy transitioned to a more strategic role, provi
 ,
   {
     name: "Darlington Johnny",
-    role: "(Farm Manager)",
+    role: "Farm Manager",
     img: "/lastimg.png",
     bio: `Darlington Tamarakuro Johnny is an agronomist and farmer from Delta State, Nigeria, currently based in Awowo, Ogun State. He holds a Bachelor of Science in Education from Delta State University, Abraka, and has developed a career centered on advancing sustainable agriculture and strengthening food security in Nigeria.
 
@@ -95,7 +95,7 @@ Darlington remains dedicated to shaping a future where farming not only sustains
   
    {
     name: "Zenas Folorunso ",
-    role: "SALES AND BUSINESS DEVELOPMENT MANAGER",
+    role: "Sales and Business Development Manager",
     img: "/zenas.jpg",
     bio: `An agribusiness consultant, educator, and advocate for youth participation in modern agriculture. Passionate about transforming the perception of farming, she helps individuals and agribusinesses unlock opportunities for growth, sustainability, and profitability across the agricultural value chain.
 
